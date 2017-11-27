@@ -7,9 +7,9 @@
     <meta name="author" content="">
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="/assets/css/lib/reset.css"> 
+    <link rel="stylesheet" href="/assets/css/lib/reset.css">
     <link rel="stylesheet" href="/assets/css/lib/tachyons.css">
-    <link rel="stylesheet" href="/assets/css/lib/custom.css"> 
+    <link rel="stylesheet" href="/assets/css/lib/custom.css">
   </head>
 
   <body class="sans-serif">
@@ -29,72 +29,60 @@
     </header>
     <!-- HEADER BLOCK-->
 
-    <!-- Title -->
+
+      <!-- About Library -->
     <div class="ph2 ph3-ns mw8 center">
-      <h1 class="f2 f1-ns mb2 mb3-ns black b">about us</h1>
+        <h1 class="f2 f1-ns mb2 mb3-ns blac b">What We Have</h1>
     </div>
+      <section class="cf mw8 center ph2 ph3-ns mb5-ns mb3">
+          <div class="fl w-100 fl w-50-ns pr4-ns pl2-m pr0">
+            
+            <ul class="accordion">
+              <li>
+                <input type="checkbox" unchecked>
+                <i></i>
+                <h2 class="pv3 f3">Research Materials</h2>
+                <p class="lh-copy">This page was written in HTML and CSS. The CSS was compiled from SASS. I used Normalize as my CSS reset and -prefix-free to save myself some headaches. I haven't quite gotten the hang of Slim for compiling into HTML, but someday I'll use it since its syntax compliments that of SASS. Regardless, this could all be done in plain HTML and CSS.</p>
+              </li>
+              <li>
+                <input type="checkbox" checked>
+                <i></i>
+                <h2 class="pv3 f3">Media + Documentation</h2>
+                <p class="lh-copy">This page was written in HTML and CSS. The CSS was compiled from SASS. I used Normalize as my CSS reset and -prefix-free to save myself some headaches. I haven't quite gotten the hang of Slim for compiling into HTML, but someday I'll use it since its syntax compliments that of SASS. Regardless, this could all be done in plain HTML and CSS.</p>
+              </li>
+              <li>
+                <input type="checkbox" checked>
+                <i></i>
+                <h2 class="pv3 f3">The Doc Lab</h2>
+                <p class="lh-copy">Using the sibling and checked selectors, we can determine the styling of sibling elements based on the checked state of the checkbox input element. One use, as demonstrated here, is an entirely CSS and HTML accordion element. Media queries are used to make the element responsive to different screen sizes.</p>
+              </li>
+            </ul>
+          </div>
 
-    <!-- Full-width background -->
-    <div class="cf mw-none center">
-      <div class="aspect-ratio aspect-ratio--16x9 mb4">
-        <div class="aspect-ratio--object cover" style="background:url(/assets/img/library1.jpg) center;"></div>
-      </div>
-    </div>
+          <div class="fl w-100 fl w-50-ns pl4-ns pl2-m pr0">
+            <ul class="accordion">
+              <li>
+                <input type="checkbox" checked>
+                <i></i>
+                <h2 class="pv3 f3">Printing + Sewing</h2>
+                <p class="lh-copy">By making the open state default for when :checked isn't detected, we can make this system accessable for browsers that don't recognize :checked. The fallback is simply an open accordion. The accordion can be manipulated with Javascript (if needed) by changing the "checked" property of the input element.</p>
+              </li>
+              <li>
+                <input lass="accordion" type="checkbox" checked>
+                <i></i>
+                <h2 class="pv3 f3">Archives</h2>
+                <p class="lh-copy">By making the open state default for when :checked isn't detected, we can make this system accessable for browsers that don't recognize :checked. The fallback is simply an open accordion. The accordion can be manipulated with Javascript (if needed) by changing the "checked" property of the input element.</p>
+              </li>
+              <li>
+                <input type="checkbox" unchecked>
+                <i></i>
+                <h2 class="pv3 f3">The Space</h2>
+                <p class="lh-copy">By making the open state default for when :checked isn't detected, we can make this system accessable for browsers that don't recognize :checked. The fallback is simply an open accordion. The accordion can be manipulated with Javascript (if needed) by changing the "checked" property of the input element.</p>
+              </li>
+            </ul>
+          </div>
+      </section>
 
-    <!-- Library Staff -->
-    <section class="cf mw8 center pa2 pa3-ns">
-      <!-- <h2 class="f2 dib tc center bg-teal">staff</h2> -->
-      <h1 class="cf f2 f1-ns mb2 mb3-ns black b">the team</h1>
-
-
-      <div class="flex justify-between">
-           <!-- 1 row 4 box > 2 row 2 box  -->
-        <div class="fl w-50 w-25-ns pa2">
-          <img class="br-100 h6 w6 dib grayscale" src="/assets/img/jeff1.png" alt="Jeff">
-          <!-- <h2>Jeff Goldenson</h2>
-          <p>Library things, family, Media lab things, MIT, tachyons</p> -->
-        </div>
-        <div class="fl w-50 w-25-ns pa2">
-          <img class="br-100 h6 w6 dib grayscale" src="/assets/img/evan1.png" alt="Emily">
-        </div>
-        <div class="fl w-50 w-25-ns pa2">
-          <img class="br-100 h6 w6 dib grayscale" src="/assets/img/johnathon1.png" alt="Maggie">
-        </div>
-      </div>
-    </section>
-
-    <!-- Library Stewards -->
-    <section class="cf mw8 center pa1 pa2-ns justify-center">
-      <!-- <h2 class="f2 dib tc i center bg-teal">stewards</h2><br> -->
-      <!-- 1 row 4 box > 2 row 2 box  -->
-      <div class="fl w-50 w-25-ns pa2">
-        <img class="br-100 h6 w6 dib grayscale" src="/assets/img/jeff1.png" alt="Jeff">
-      </div>
-      <div class="fl w-50 w-25-ns pa2">
-        <img class="br-100 h6 w6 dib grayscale" src="/assets/img/evan1.png" alt="Emily">
-      </div>
-      <div class="fl w-50 w-25-ns pa2">
-        <img class="br-100 h6 w6 dib grayscale" src="/assets/img/johnathon1.png" alt="Maggie">
-      </div>
-      <div class="fl w-50 w-25-ns pa2">
-        <img class="br-100 h6 w6 dib grayscale" src="/assets/img/jeff1.png" alt="Jeff">
-      </div>
-      <div class="fl w-50 w-25-ns pa2">
-        <img class="br-100 h6 w6 dib grayscale" src="/assets/img/evan1.png" alt="Emily">
-      </div>
-      <div class="fl w-50 w-25-ns pa2">
-        <img class="br-100 h6 w6 dib grayscale" src="/assets/img/johnathon1.png" alt="Maggie">
-      </div>
-      <div class="fl w-50 w-25-ns pa2">
-        <img class="br-100 h6 w6 dib grayscale" src="/assets/img/jeff1.png" alt="Jeff">
-      </div>
-      <div class="fl w-50 w-25-ns pa2">
-        <img class="br-100 h6 w6 dib grayscale" src="/assets/img/evan1.png" alt="Emily">
-      </div>
-      <div class="fl w-50 w-25-ns pa2">
-        <img class="br-100 h6 w6 dib grayscale" src="/assets/img/johnathon1.png" alt="Maggie">
-      </div>
-    </section>
 
     <!-- FOOTER BLOCK, full-width enabling highlight color -->
 
