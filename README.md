@@ -32,3 +32,9 @@ _stay tuned!_
 ├── index.html
 └── README.md
 ```
+
+## Getting Started
+
+1. Clone the repo `git clone https://github.com/olinlibrary/library-website.git`.
+2. Install [Ruby](https://www.ruby-lang.org/en/documentation/installation/) and [Jekyll](https://jekyllrb.com/docs/installation/).
+3. Run `jekyll serve` and navigate to the url given to view the website.

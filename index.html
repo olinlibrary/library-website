@@ -1,65 +1,118 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-    <title>The Library</title>
-    <meta name="author" content="">
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="/assets/css/lib/reset.css">
-    <link rel="stylesheet" href="/assets/css/lib/tachyons.css">
-    <link rel="stylesheet" href="/assets/css/lib/custom.css">
-    <script src="/assets/js/lib/modernizr.js"></script> <!-- Modernizr -->
-  </head>
+---
+layout: default
+---
+<!-- Search Block, full-width enabling highlight color -->
+<div class="ph2 ph3-ns mw8 center">
+  <h1 class="f2 f1-ns mb2 mb3-ns black b">search</h1>
+</div>
+<div class="cf mw-none center pv2 pv3-ns bg-black-10">
+  <!-- Search section - narrower tabbed search panel -->
+  <section class="ph2 ph3-ns mw8 center">
+    <div class="cd-tabs">
 
-  <body class="sans-serif">
-    <!-- Header Block, relying on body as background color -->
-    <header class="mw8 center pa2 pa3-ns">
-      <nav class="">
-        <h1 class="lh-solid f5 f4-ns">
-          <a class="link dim black b dib mr3" href="/" title="Home">The Library<br> Olin College Engineering</a>
-        </h1>
-        <div class="">
-          <a class="link dim gray f6 dib mr3" href="/" title="Home">Home</a>
-          <a class="link dim gray f6 dib mr3" href="/collections.html" title="Collections">What We Have</a>
-          <a class="link dim gray f6 dib mr3" href="/services.html" title="Access and Services">Using Our Library</a>
-          <a class="link dim gray f6 dib mr3" href="/blog" title="Services">Blog</a>
-          <a class="link dim gray f6 dib mr3" href="/about.html" title="About">About</a>
-        </div>
+      <nav>
+        <ul class="cd-tabs-navigation list">
+          <li><a data-content="physical" class="selected" href="#0"><span class="cd-tabs-navigation-icons f4">🖐</span>Physical Holdings</a></li>
+          <li><a data-content="electronic" href="#0"><span class="cd-tabs-navigation-icons f4">🔗</span>Electonic Holdings</a></li>
+          <li><a data-content="worldcat" href="#0"><span class="cd-tabs-navigation-icons f4">🌎</span>Available Nearby</a></li>
+          <li><a data-content="archives" href="#0"><span class="cd-tabs-navigation-icons f4">🚪</span>The Archives</a></li>
+        </ul>
       </nav>
-    </header>
-    <!-- Header Block-->
+
+      <!-- collections list container-->
+      <ul class="cd-tabs-content black lh-copy">
+
+        <!-- physical collections -->
+        <li data-content="physical" class="selected">
+          <form class="bg-white pa3 br2-ns ba b--black-10 mw8 center" name="search" action="https://olin.tind.io/search" method="get">
+            <fieldset class="cf bn ma0 pa0">
 
 
-    <!-- Search Block, full-width enabling highlight color -->
-    <div class="ph2 ph3-ns mw8 center">
-      <h1 class="f2 f1-ns mb2 mb3-ns black b">search</h1>
-    </div>
-    <div class="cf mw-none center pv2 pv3-ns bg-black-10">
-      <!-- Search section - narrower tabbed search panel -->
-      <section class="ph2 ph3-ns mw8 center">
-        <div class="cd-tabs">
+              <label class="clip" for="search">Search</label>
 
-          <nav>
-            <ul class="cd-tabs-navigation list">
-              <li><a data-content="physical" class="selected" href="#0"><span class="cd-tabs-navigation-icons f4">🖐</span>Physical Holdings</a></li>
-              <li><a data-content="electronic" href="#0"><span class="cd-tabs-navigation-icons f4">🔗</span>Electonic Holdings</a></li>
-              <li><a data-content="worldcat" href="#0"><span class="cd-tabs-navigation-icons f4">🌎</span>Available Nearby</a></li>
-              <li><a data-content="archives" href="#0"><span class="cd-tabs-navigation-icons f4">🚪</span>The Archives</a></li>
-            </ul>
-          </nav>
+              <!-- search box -->
+              <input class="bg-black-10 bn f6 f5-l input-reset fl pa3 lh-solid w-100 w-75-m w-80-l br2-ns br--left-ns" type="text" name="p">
 
-          <!-- collections list container-->
-          <ul class="cd-tabs-content black lh-copy">
+              <!-- search button -->
+              <input class="bn f6 f5-l button-reset fl pv3 tc bg-animate bg-black-70 hover-bg-black white pointer w-100 w-25-m w-20-l br2-ns br--right-ns" type="submit" value="Search">
 
-            <!-- physical collections -->
-            <li data-content="physical" class="selected">
-              <form class="bg-white pa3 br2-ns ba b--black-10 mw8 center" name="search" action="https://olin.tind.io/search" method="get">
-                <fieldset class="cf bn ma0 pa0">
+              <!-- search refinement (hidden) -->
+              <input type="checkbox" name="fct__1" value="Library Shelves" checked="checked" style="display:none">
+
+              <div class="fl w-100 w-50-ns pa2 pt3">
+                <p><span class="grayscale">📚</span>&nbsp;Books on the Shelves <br><span class="grayscale">🎥</span>&nbsp;Media Equipment <br><span class="grayscale">🛠</span>&nbsp;Select Tools</p>
+              </div>
+              <div class="fl w-100 w-50-ns pa2 pt3">
+                <p>These are the items we have on campus, available in our library. Unless taken out, these items are available now.</p>
+              </div>
+            </fieldset>
+           </form>
+        </li>
+
+        <!-- electronic collections -->
+        <li data-content="electronic">
+          <!-- begin: Ebsco Discovery Service (EDS) search -->
+          <form class="bg-white pa3 br2-ns ba b--black-10 mw8 center" action="http://search.ebscohost.com/login.aspx" method="get">
+            <fieldset class="cf bn ma0 pa0">
+              <input name="direct" value="true" type="hidden">
+              <input name="authtype" value="ip,guest" type="hidden">
+              <input name="site" value="eds-live" type="hidden">
+              <input name="scope" value="site" type="hidden">
+              <input name="type" value="0" type="hidden">
+              <input name="custid" value="s6621808" type="hidden">
+              <input name="groupid" value="main" type="hidden">
+              <input name="profile" value="eds " type="hidden">
+
+              <!-- search box -->
+              <input name="bquery" value="" type="search" class="bg-black-10 bn f6 f5-l input-reset fl pa3 lh-solid w-100 w-75-m w-80-l br2-ns br--left-ns">
+
+             <!-- search button -->
+             <input value="Search" type="submit" class="f6 f5-l button-reset fl pv3 tc bn bg-animate bg-black-70 hover-bg-black white pointer w-100 w-25-m w-20-l br2-ns br--right-ns">
+
+              <div class="fl w-100 w-50-ns pa2 pt3">
+                <p><span class="grayscale">🗄</span>&nbsp;Databases <br><span class="grayscale">📄</span>&nbsp;PDFs <br><span class="grayscale">📖 </span>&nbsp;eBooks</p>
+              </div>
+              <div class="fl w-100 w-50-ns pa2 pt3">
+                <p>Databases, Journals, eBooks, etc. <br>See this <a class="underline white" href="#" title="About">complete list of our Electronic Holdings</a></p>
+              </div>
+            </fieldset>
+          </form>
+         <!-- end: Ebsco Discovery Service (EDS) search -->
+        </li>
+
+        <!-- worldcat collection -->
+        <li data-content="worldcat">
+          <form name="wcfw" id="wcfw" method="get" accept-charset="UTF-8" action="https://www.worldcat.org/search" target="_top" class="bg-white pa3 br2-ns ba b--black-10 mw8 center">
+             <fieldset class="cf bn ma0 pa0">
+                  <input type="hidden" name="qt" value="affiliate" />
+                  <input type="hidden" name="ai" value="Olin_olin_library" />
+
+                  <label class="clip" for="email-address">Search</label>
+
+                  <!-- search box -->
+                  <input class="bg-black-10 bn f6 f5-l input-reset fl pa3 lh-solid w-100 w-75-m w-80-l br2-ns br--left-ns" type="text" name="q" id="q">
+
+                  <!-- search button -->
+                  <input class="bn f6 f5-l button-reset fl pv3 tc bg-animate bg-black-70 hover-bg-black white pointer w-100 w-25-m w-20-l br2-ns br--right-ns" type="submit" value="Search">
 
 
-                  <label class="clip" for="search">Search</label>
+
+                <div class="fl w-100 w-50-ns pa2 pt3">
+                  <p><span class="grayscale">📓</span>&nbsp;Nearby Libraries <br><span class="grayscale">📙</span>&nbsp;Published Papers<br><span class="grayscale">🎟️</span>&nbsp;Events</p>
+                </div>
+                <div class="fl w-100 w-50-ns pa2">
+                  <p>Published Papers <br>Capstone Projects <br>Syllabi</p>
+                </div>
+              </fieldset>
+            </form>
+        </li>
+
+        <!-- archives collection -->
+        <li data-content="archives">
+          <form class="bg-white pa3 br2-ns ba b--black-10 mw8 center" name="search" action="https://olin.tind.io/search" method="get">
+             <fieldset class="cf bn ma0 pa0">
+
+                  <label class="clip" for="email-address">Search</label>
 
                   <!-- search box -->
                   <input class="bg-black-10 bn f6 f5-l input-reset fl pa3 lh-solid w-100 w-75-m w-80-l br2-ns br--left-ns" type="text" name="p">
@@ -67,232 +120,87 @@
                   <!-- search button -->
                   <input class="bn f6 f5-l button-reset fl pv3 tc bg-animate bg-black-70 hover-bg-black white pointer w-100 w-25-m w-20-l br2-ns br--right-ns" type="submit" value="Search">
 
-                  <!-- search refinement (hidden) -->
-                  <input type="checkbox" name="fct__1" value="Library Shelves" checked="checked" style="display:none">
+                  <input type="checkbox" name="c" value="Archive" checked="checked" style="display:none">
 
-                  <div class="fl w-100 w-50-ns pa2 pt3">
-                    <p><span class="grayscale">📚</span>&nbsp;Books on the Shelves <br><span class="grayscale">🎥</span>&nbsp;Media Equipment <br><span class="grayscale">🛠</span>&nbsp;Select Tools</p>
-                  </div>
-                  <div class="fl w-100 w-50-ns pa2 pt3">
-                    <p>These are the items we have on campus, available in our library. Unless taken out, these items are available now.</p>
-                  </div>
-                </fieldset>
-               </form>
-            </li>
+                <div class="fl w-100 w-50-ns pa2 pt3">
+                  <p><span class="grayscale">📓</span>&nbsp;Capstone Projects <br><span class="grayscale">📙</span>&nbsp;Published Papers<br><span class="grayscale">🎟️</span>&nbsp;Events</p>
+                </div>
+                <div class="fl w-100 w-50-ns pa2">
+                  <p>Published Papers <br>Capstone Projects <br>Syllabi</p>
+                </div>
+              </fieldset>
+            </form>
+        </li>
+      </ul><!-- collections list container-->
+    </div> <!-- cd-tabs -->
+  </section> <!-- search section -->
+</div> <!-- Search Block End -->
 
-            <!-- electronic collections -->
-            <li data-content="electronic">
-              <!-- begin: Ebsco Discovery Service (EDS) search -->
-              <form class="bg-white pa3 br2-ns ba b--black-10 mw8 center" action="http://search.ebscohost.com/login.aspx" method="get">
-                <fieldset class="cf bn ma0 pa0">
-                  <input name="direct" value="true" type="hidden">
-                  <input name="authtype" value="ip,guest" type="hidden">
-                  <input name="site" value="eds-live" type="hidden">
-                  <input name="scope" value="site" type="hidden">
-                  <input name="type" value="0" type="hidden">
-                  <input name="custid" value="s6621808" type="hidden">
-                  <input name="groupid" value="main" type="hidden">
-                  <input name="profile" value="eds " type="hidden">
-
-                  <!-- search box -->
-                  <input name="bquery" value="" type="search" class="bg-black-10 bn f6 f5-l input-reset fl pa3 lh-solid w-100 w-75-m w-80-l br2-ns br--left-ns">
-
-                 <!-- search button -->
-                 <input value="Search" type="submit" class="f6 f5-l button-reset fl pv3 tc bn bg-animate bg-black-70 hover-bg-black white pointer w-100 w-25-m w-20-l br2-ns br--right-ns">
-
-                  <div class="fl w-100 w-50-ns pa2 pt3">
-                    <p><span class="grayscale">🗄</span>&nbsp;Databases <br><span class="grayscale">📄</span>&nbsp;PDFs <br><span class="grayscale">📖 </span>&nbsp;eBooks</p>
-                  </div>
-                  <div class="fl w-100 w-50-ns pa2 pt3">
-                    <p>Databases, Journals, eBooks, etc. <br>See this <a class="underline white" href="#" title="About">complete list of our Electronic Holdings</a></p>
-                  </div>
-                </fieldset>
-              </form>
-             <!-- end: Ebsco Discovery Service (EDS) search -->
-            </li>
-
-            <!-- worldcat collection -->
-            <li data-content="worldcat">
-              <form name="wcfw" id="wcfw" method="get" accept-charset="UTF-8" action="https://www.worldcat.org/search" target="_top" class="bg-white pa3 br2-ns ba b--black-10 mw8 center">
-                 <fieldset class="cf bn ma0 pa0">
-                      <input type="hidden" name="qt" value="affiliate" />
-                      <input type="hidden" name="ai" value="Olin_olin_library" />
-
-                      <label class="clip" for="email-address">Search</label>
-
-                      <!-- search box -->
-                      <input class="bg-black-10 bn f6 f5-l input-reset fl pa3 lh-solid w-100 w-75-m w-80-l br2-ns br--left-ns" type="text" name="q" id="q">
-
-                      <!-- search button -->
-                      <input class="bn f6 f5-l button-reset fl pv3 tc bg-animate bg-black-70 hover-bg-black white pointer w-100 w-25-m w-20-l br2-ns br--right-ns" type="submit" value="Search">
-
-
-
-                    <div class="fl w-100 w-50-ns pa2 pt3">
-                      <p><span class="grayscale">📓</span>&nbsp;Nearby Libraries <br><span class="grayscale">📙</span>&nbsp;Published Papers<br><span class="grayscale">🎟️</span>&nbsp;Events</p>
-                    </div>
-                    <div class="fl w-100 w-50-ns pa2">
-                      <p>Published Papers <br>Capstone Projects <br>Syllabi</p>
-                    </div>
-                  </fieldset>
-                </form>
-            </li>
-
-            <!-- archives collection -->
-            <li data-content="archives">
-              <form class="bg-white pa3 br2-ns ba b--black-10 mw8 center" name="search" action="https://olin.tind.io/search" method="get">
-                 <fieldset class="cf bn ma0 pa0">
-
-                      <label class="clip" for="email-address">Search</label>
-
-                      <!-- search box -->
-                      <input class="bg-black-10 bn f6 f5-l input-reset fl pa3 lh-solid w-100 w-75-m w-80-l br2-ns br--left-ns" type="text" name="p">
-
-                      <!-- search button -->
-                      <input class="bn f6 f5-l button-reset fl pv3 tc bg-animate bg-black-70 hover-bg-black white pointer w-100 w-25-m w-20-l br2-ns br--right-ns" type="submit" value="Search">
-
-                      <input type="checkbox" name="c" value="Archive" checked="checked" style="display:none">
-
-                    <div class="fl w-100 w-50-ns pa2 pt3">
-                      <p><span class="grayscale">📓</span>&nbsp;Capstone Projects <br><span class="grayscale">📙</span>&nbsp;Published Papers<br><span class="grayscale">🎟️</span>&nbsp;Events</p>
-                    </div>
-                    <div class="fl w-100 w-50-ns pa2">
-                      <p>Published Papers <br>Capstone Projects <br>Syllabi</p>
-                    </div>
-                  </fieldset>
-                </form>
-            </li>
-          </ul><!-- collections list container-->
-        </div> <!-- cd-tabs -->
-      </section> <!-- search section -->
-    </div> <!-- Search Block End -->
-
-    <!-- Products and Services Previews -->
-   <!-- <section class="flex justify-center cf mw8 center pa1 pa2-ns">
-      <a href="/services.html#design-review-as-a-service"></a>
-      <article class="br2 ba dark-gray b--black-10 mv4 w-100 w-50-m w-25-l mw5 center">
-        <img src="http://placekitten.com/g/600/300" class="db w-100 br2 br--top" alt="Photo of a kitten looking menacing.">
-        <div class="pa2 ph3-ns pb3-ns">
-          <div class="dt w-100 mt1">
-            <div class="dtc">
-              <h1 class="f5 f4-ns mv0">Design Review</h1>
-            </div>
-
-          </div>
-          <p class="f6 lh-copy measure mt2 mid-gray">
-            Schedule an appointment to have a project design review.  Any and all projects, in all phases of development or non-development are fair game.
-          </p>
-          <div class="tc pa2">
-            <a class="f6 link dim br3 ph3 pv2 mb2 dib white bg-mid-gray" href="/services.html#design-review-as-a-service">Learn More</a>
-          </div>
+<!-- Products and Services Previews -->
+<!-- <section class="flex justify-center cf mw8 center pa1 pa2-ns">
+  <a href="/services.html#design-review-as-a-service"></a>
+  <article class="br2 ba dark-gray b--black-10 mv4 w-100 w-50-m w-25-l mw5 center">
+    <img src="http://placekitten.com/g/600/300" class="db w-100 br2 br--top" alt="Photo of a kitten looking menacing.">
+    <div class="pa2 ph3-ns pb3-ns">
+      <div class="dt w-100 mt1">
+        <div class="dtc">
+          <h1 class="f5 f4-ns mv0">Design Review</h1>
         </div>
-      </article>
 
-      <article class="br2 ba dark-gray b--black-10 mv4 w-100 w-50-m w-25-l mw5 center">
-        <img src="http://placekitten.com/g/600/300" class="db w-100 br2 br--top" alt="Photo of a kitten looking menacing.">
-        <div class="pa2 ph3-ns pb3-ns">
-          <div class="dt w-100 mt1">
-            <div class="dtc">
-              <h1 class="f5 f4-ns mv0">Design Review</h1>
-            </div>
-
-          </div>
-          <p class="f6 lh-copy measure mt2 mid-gray">
-            Schedule an appointment to have a project design review.  Any and all projects, in all phases of development or non-development are fair game.
-          </p>
-        </div>
-      </article>
-
-      <article class="br2 ba dark-gray b--black-10 mv4 w-100 w-50-m w-25-l mw5 center">
-        <img src="http://placekitten.com/g/600/300" class="db w-100 br2 br--top" alt="Photo of a kitten looking menacing.">
-        <div class="pa2 ph3-ns pb3-ns">
-          <div class="dt w-100 mt1">
-            <div class="dtc">
-              <h1 class="f5 f4-ns mv0">Design Review</h1>
-            </div>
-
-          </div>
-          <p class="f6 lh-copy measure mt2 mid-gray">
-            Schedule an appointment to have a project design review.  Any and all projects, in all phases of development or non-development are fair game.
-          </p>
-        </div>
-      </article>
-    </section> -->
-
-    <!-- examples section 2 -->
-    <section class="cf pa2 pa3-ns mw8 center">
-      <!-- 1 row 4 box > 2 row 2 box  -->
-      <article class="fl w-50 w-25-ns pa0 pr2 grayscale">
-        <img class="db w-100 " src="/assets/img/episode.png" alt="night sky over house">
-      </article>
-      <article class="fl w-50 w-25-ns pa2 grayscale">
-        <img class="db w-100 " src="/assets/img/library-button.png" alt="night sky over house">
-      </article>
-      <article class="fl w-50 w-25-ns pa2 grayscale">
-        <img class="db w-100 " src="/assets/img/proto-button.png" alt="night sky over house">
-      </article>
-      <article class="fl w-50 w-25-ns pa0 pl2 grayscale">
-        <img class="db w-100 " src="/assets/img/experiments.png" alt="night sky over house">
-      </article>
-    </section>
-
-    <!-- FOOTER BLOCK, full-width enabling highlight color -->
-
-    <footer class="bg-teal cf pa2-l pa1 pb3 black-70 bt b--black-10">
-      <div class="mb4-l mw8 center pa2 pa3-ns center cf pt3 pt4-m pt5-ns">
-        <article class="fl w-25-ns w-50-m w-100 mb4-ns mb3 pl0-ns pl2-m pr2">
-          <h4 class="f5 f4-l fw6 yellow">Facilities & Hours</h4>
-           <a class="link dim white f6 dib" href="/" title="Home">Search</a>
-
-        </article>
-
-
-        <article class="fl w-25-ns w-50-m w-100 mb4-ns mb3 pl0-ns pl2-m pr2">
-          <h4 class="f5 f4-l fw6 yellow">Library Guides</h4>
-          <a class="link dim white f6 dib" href="/" title="Home">Search</a>
-        </article>
-
-
-        <article class="fl w-25-ns w-50-m w-100 mb4-ns mb3 pl4-ns pl2-m pr2">
-          <h4 class="f5 f4-l fw6 yellow">Olin Workshop on the Library</h4>
-          <a class="link dim white f6 dib" href="/" title="Home">Search</a>
-        </article>
-
-
-        <article class="fl w-25-ns w-50-m w-100 mb4-ns mb3 pl0-ns pl2-m pr2">
-          <h4 class="f5 f4-l fw6 yellow">Policies & Practices</h4>
-          <a class="link dim white f6 dib" href="/" title="Home">Search</a>
-        </article>
       </div>
+      <p class="f6 lh-copy measure mt2 mid-gray">
+        Schedule an appointment to have a project design review.  Any and all projects, in all phases of development or non-development are fair game.
+      </p>
+      <div class="tc pa2">
+        <a class="f6 link dim br3 ph3 pv2 mb2 dib white bg-mid-gray" href="/services.html#design-review-as-a-service">Learn More</a>
+      </div>
+    </div>
+  </article>
 
-      <section class="cf mw8 center pa2 pa3-ns pt1-ns">
-        <form action="https://olin.us14.list-manage.com/subscribe/post?u=04bdcf27507f8548306a85949&amp;id=6652e78322" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-          <p class="mb2 mt0 white">
-            We also happen to have an infrequent, hopefully enjoyable, newsletter.
-          </p>
-          <!--mailchimp signup-->
-          <input type="email" value="" name="EMAIL" placeholder="Email Address" class="mw-100 w-100 w5-ns f5 input-reset ba bg-white-30 b--black-20 white pv3 ph4 border-box" id="mce-EMAIL">
-          <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="input-reset w-100 w-auto-ns bg-black-30 white f5 pv2 pv3-ns ph4 ba b--black-20 bg-hover-mid-gray">
+  <article class="br2 ba dark-gray b--black-10 mv4 w-100 w-50-m w-25-l mw5 center">
+    <img src="http://placekitten.com/g/600/300" class="db w-100 br2 br--top" alt="Photo of a kitten looking menacing.">
+    <div class="pa2 ph3-ns pb3-ns">
+      <div class="dt w-100 mt1">
+        <div class="dtc">
+          <h1 class="f5 f4-ns mv0">Design Review</h1>
+        </div>
 
-          <!-- cruft from mailchimp-->
-          <div id="mce-responses" class="clear">
-            <div class="response" id="mce-error-response" style="display:none"></div>
-            <div class="response" id="mce-success-response" style="display:none"></div>
-          </div>
+      </div>
+      <p class="f6 lh-copy measure mt2 mid-gray">
+        Schedule an appointment to have a project design review.  Any and all projects, in all phases of development or non-development are fair game.
+      </p>
+    </div>
+  </article>
 
-          <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-          <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_04bdcf27507f8548306a85949_6652e78322" tabindex="-1" value=""></div>
-        </form>
-      </section>
-    </footer> <!-- FOOTER BLOCK -->
+  <article class="br2 ba dark-gray b--black-10 mv4 w-100 w-50-m w-25-l mw5 center">
+    <img src="http://placekitten.com/g/600/300" class="db w-100 br2 br--top" alt="Photo of a kitten looking menacing.">
+    <div class="pa2 ph3-ns pb3-ns">
+      <div class="dt w-100 mt1">
+        <div class="dtc">
+          <h1 class="f5 f4-ns mv0">Design Review</h1>
+        </div>
 
-     <!-- TABS SCRIPT -->
-    <script
-      src="https://code.jquery.com/jquery-2.2.4.min.js"
-      integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
-      crossorigin="anonymous"></script>
-    <script src="/assets/js/lib/tabs.js"></script> <!-- Resource jQuery -->
+      </div>
+      <p class="f6 lh-copy measure mt2 mid-gray">
+        Schedule an appointment to have a project design review.  Any and all projects, in all phases of development or non-development are fair game.
+      </p>
+    </div>
+  </article>
+</section> -->
 
-
-  </body>
-</html>
+<!-- examples section 2 -->
+<section class="cf pa2 pa3-ns mw8 center">
+  <!-- 1 row 4 box > 2 row 2 box  -->
+  <article class="fl w-50 w-25-ns pa0 pr2 grayscale">
+    <img class="db w-100 " src="/assets/img/episode.png" alt="night sky over house">
+  </article>
+  <article class="fl w-50 w-25-ns pa2 grayscale">
+    <img class="db w-100 " src="/assets/img/library-button.png" alt="night sky over house">
+  </article>
+  <article class="fl w-50 w-25-ns pa2 grayscale">
+    <img class="db w-100 " src="/assets/img/proto-button.png" alt="night sky over house">
+  </article>
+  <article class="fl w-50 w-25-ns pa0 pl2 grayscale">
+    <img class="db w-100 " src="/assets/img/experiments.png" alt="night sky over house">
+  </article>
+</section>

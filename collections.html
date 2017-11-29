@@ -1,138 +1,49 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-    <title>The Library</title>
-    <meta name="author" content="">
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="/assets/css/lib/reset.css">
-    <link rel="stylesheet" href="/assets/css/lib/tachyons.css">
-    <link rel="stylesheet" href="/assets/css/lib/custom.css">
-  </head>
+---
+layout: page
+title: What We Have
+---
+<div class="fl w-100 fl w-50-ns pr4-ns pl2-m pr0">
+<ul class="accordion">
+  <li>
+    <input type="checkbox" unchecked>
+    <i></i>
+    <h2>Research Materials</h2>
+    <p>This page was written in HTML and CSS. The CSS was compiled from SASS. I used Normalize as my CSS reset and -prefix-free to save myself some headaches. I haven't quite gotten the hang of Slim for compiling into HTML, but someday I'll use it since its syntax compliments that of SASS. Regardless, this could all be done in plain HTML and CSS.</p>
+  </li>
+  <li>
+    <input type="checkbox" checked>
+    <i></i>
+    <h2 class="pv3 f3">Media + Documentation</h2>
+    <p class="lh-copy">This page was written in HTML and CSS. The CSS was compiled from SASS. I used Normalize as my CSS reset and -prefix-free to save myself some headaches. I haven't quite gotten the hang of Slim for compiling into HTML, but someday I'll use it since its syntax compliments that of SASS. Regardless, this could all be done in plain HTML and CSS.</p>
+  </li>
+  <li>
+    <input type="checkbox" checked>
+    <i></i>
+    <h2 class="pv3 f3">The Doc Lab</h2>
+    <p class="lh-copy">Using the sibling and checked selectors, we can determine the styling of sibling elements based on the checked state of the checkbox input element. One use, as demonstrated here, is an entirely CSS and HTML accordion element. Media queries are used to make the element responsive to different screen sizes.</p>
+  </li>
+</ul>
+</div>
 
-  <body class="sans-serif">
-    <!-- HEADER BLOCK, relying on body as background color -->
-    <header class="mw8 center pa2 pa3-ns">
-      <nav class="">
-        <h1 class="lh-solid f5 f4-ns">
-          <a class="link dim black b dib mr3" href="/" title="Home">The Library<br> Olin College Engineering</a>
-        </h1>
-        <div class="">
-          <a class="link dim gray f6 dib mr3" href="/" title="Home">Home</a>
-           <a class="link dim gray f6 dib mr3" href="/collections.html" title="Collections">What We Have</a>
-          <a class="link dim gray f6 dib mr3" href="/services.html" title="Access and Services">Using Our Library</a>
-          <a class="link dim gray f6 dib mr3" href="/about.html" title="About">About</a>
-        </div>
-      </nav>
-    </header>
-    <!-- HEADER BLOCK-->
-
-
-      <!-- About Library -->
-    <div class="ph2 ph3-ns mw8 center">
-        <h1 class="f2 f1-ns mb2 mb3-ns blac b">What We Have</h1>
-    </div>
-      <section class="cf mw8 center ph2 ph3-ns mb5-ns mb3">
-          <div class="fl w-100 fl w-50-ns pr4-ns pl2-m pr0">
-            
-            <ul class="accordion">
-              <li>
-                <input type="checkbox" unchecked>
-                <i></i>
-                <h2 class="pv3 f3">Research Materials</h2>
-                <p class="lh-copy">This page was written in HTML and CSS. The CSS was compiled from SASS. I used Normalize as my CSS reset and -prefix-free to save myself some headaches. I haven't quite gotten the hang of Slim for compiling into HTML, but someday I'll use it since its syntax compliments that of SASS. Regardless, this could all be done in plain HTML and CSS.</p>
-              </li>
-              <li>
-                <input type="checkbox" checked>
-                <i></i>
-                <h2 class="pv3 f3">Media + Documentation</h2>
-                <p class="lh-copy">This page was written in HTML and CSS. The CSS was compiled from SASS. I used Normalize as my CSS reset and -prefix-free to save myself some headaches. I haven't quite gotten the hang of Slim for compiling into HTML, but someday I'll use it since its syntax compliments that of SASS. Regardless, this could all be done in plain HTML and CSS.</p>
-              </li>
-              <li>
-                <input type="checkbox" checked>
-                <i></i>
-                <h2 class="pv3 f3">The Doc Lab</h2>
-                <p class="lh-copy">Using the sibling and checked selectors, we can determine the styling of sibling elements based on the checked state of the checkbox input element. One use, as demonstrated here, is an entirely CSS and HTML accordion element. Media queries are used to make the element responsive to different screen sizes.</p>
-              </li>
-            </ul>
-          </div>
-
-          <div class="fl w-100 fl w-50-ns pl4-ns pl2-m pr0">
-            <ul class="accordion">
-              <li>
-                <input type="checkbox" checked>
-                <i></i>
-                <h2 class="pv3 f3">Printing + Sewing</h2>
-                <p class="lh-copy">By making the open state default for when :checked isn't detected, we can make this system accessable for browsers that don't recognize :checked. The fallback is simply an open accordion. The accordion can be manipulated with Javascript (if needed) by changing the "checked" property of the input element.</p>
-              </li>
-              <li>
-                <input lass="accordion" type="checkbox" checked>
-                <i></i>
-                <h2 class="pv3 f3">Archives</h2>
-                <p class="lh-copy">By making the open state default for when :checked isn't detected, we can make this system accessable for browsers that don't recognize :checked. The fallback is simply an open accordion. The accordion can be manipulated with Javascript (if needed) by changing the "checked" property of the input element.</p>
-              </li>
-              <li>
-                <input type="checkbox" unchecked>
-                <i></i>
-                <h2 class="pv3 f3">The Space</h2>
-                <p class="lh-copy">By making the open state default for when :checked isn't detected, we can make this system accessable for browsers that don't recognize :checked. The fallback is simply an open accordion. The accordion can be manipulated with Javascript (if needed) by changing the "checked" property of the input element.</p>
-              </li>
-            </ul>
-          </div>
-      </section>
-
-
-    <!-- FOOTER BLOCK, full-width enabling highlight color -->
-
-    <footer class="bg-teal cf pa2-l pa1 pb3 black-70 bt b--black-10">
-      <div class="mb4-l mw8 center pa2 pa3-ns center cf pt3 pt4-m pt5-ns">
-        <article class="fl w-25-ns w-50-m w-100 mb4-ns mb3 pl0-ns pl2-m pr2">
-          <h4 class="f5 f4-l fw6 yellow">Facilities & Hours</h4>
-           <a class="link dim white f6 dib" href="/" title="Home">Search</a>
-          
-        </article>
-        
-
-        <article class="fl w-25-ns w-50-m w-100 mb4-ns mb3 pl0-ns pl2-m pr2">
-          <h4 class="f5 f4-l fw6 yellow">Library Guides</h4>
-          <a class="link dim white f6 dib" href="/" title="Home">Search</a>
-        </article>
-
-        
-        <article class="fl w-25-ns w-50-m w-100 mb4-ns mb3 pl4-ns pl2-m pr2">
-          <h4 class="f5 f4-l fw6 yellow">Olin Workshop on the Library</h4>
-          <a class="link dim white f6 dib" href="/" title="Home">Search</a>
-        </article>
-
-
-        <article class="fl w-25-ns w-50-m w-100 mb4-ns mb3 pl0-ns pl2-m pr2">
-          <h4 class="f5 f4-l fw6 yellow">Policies & Practices</h4>
-          <a class="link dim white f6 dib" href="/" title="Home">Search</a>
-        </article>
-      </div>
-
-      <section class="cf mw8 center pa2 pa3-ns pt1-ns">
-        <form action="https://olin.us14.list-manage.com/subscribe/post?u=04bdcf27507f8548306a85949&amp;id=6652e78322" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-          <p class="mb2 mt0 white">
-            We also happen to have an infrequent, hopefully enjoyable, newsletter.  
-          </p>
-          <!--mailchimp signup-->    
-          <input type="email" value="" name="EMAIL" placeholder="Email Address" class="mw-100 w-100 w5-ns f5 input-reset ba bg-white-30 b--black-20 white pv3 ph4 border-box" id="mce-EMAIL">
-          <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="input-reset w-100 w-auto-ns bg-black-30 white f5 pv2 pv3-ns ph4 ba b--black-20 bg-hover-mid-gray">
-          
-          <!-- cruft from mailchimp-->  
-          <div id="mce-responses" class="clear">
-            <div class="response" id="mce-error-response" style="display:none"></div>
-            <div class="response" id="mce-success-response" style="display:none"></div>
-          </div>    
-
-          <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-          <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_04bdcf27507f8548306a85949_6652e78322" tabindex="-1" value=""></div>          
-        </form>
-      </section>
-    </footer> <!-- FOOTER BLOCK -->
-
-  </body>
-</html>
+<div class="fl w-100 fl w-50-ns pl4-ns pl2-m pr0">
+<ul class="accordion">
+  <li>
+    <input type="checkbox" checked>
+    <i></i>
+    <h2 class="pv3 f3">Printing + Sewing</h2>
+    <p class="lh-copy">By making the open state default for when :checked isn't detected, we can make this system accessable for browsers that don't recognize :checked. The fallback is simply an open accordion. The accordion can be manipulated with Javascript (if needed) by changing the "checked" property of the input element.</p>
+  </li>
+  <li>
+    <input lass="accordion" type="checkbox" checked>
+    <i></i>
+    <h2 class="pv3 f3">Archives</h2>
+    <p class="lh-copy">By making the open state default for when :checked isn't detected, we can make this system accessable for browsers that don't recognize :checked. The fallback is simply an open accordion. The accordion can be manipulated with Javascript (if needed) by changing the "checked" property of the input element.</p>
+  </li>
+  <li>
+    <input type="checkbox" unchecked>
+    <i></i>
+    <h2 class="pv3 f3">The Space</h2>
+    <p class="lh-copy">By making the open state default for when :checked isn't detected, we can make this system accessable for browsers that don't recognize :checked. The fallback is simply an open accordion. The accordion can be manipulated with Javascript (if needed) by changing the "checked" property of the input element.</p>
+  </li>
+</ul>
+</div>

@@ -7,5 +7,4 @@ article.post {
   h2 { @extend .pv3, .f3; }
   p { @extend .lh-copy; }
   img { @extend .db, .br1, .pb1, .pb2-ns; }
-  .column { @extend .fl, .w-100, .fl, .w-50-ns, .pl4-ns, .pl2-m, .pr0; }
 }
