@@ -14,3 +14,15 @@ I really don't know what will be appropriate to put here.  I think that there's 
  Sure.  That will [be it](https://www.nytimes.com).
 
  Goodnight.  
+
+ Create (and add) the most incongruous, but suprisingly relevant, mixed/multi-media catalog record
+
+- LC Catalog it (create Subject Fields) 
+- Create supplemental Markdown elements to capture it.
+- Larger Exercise
+
+### Create (and add) the most incongruous, but suprisingly relevant, mixed/multi-media catalog record
+
+- LC Catalog it (create Subject Fields) 
+- Create supplemental Markdown elements to capture it.
+- Larger Exercise

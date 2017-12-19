@@ -4,15 +4,11 @@
 @import 'tachyons';
 
 article.post {
-  h2 { @extend .pv3, .f3; }
+  h2 { @extend .pv3 .f3; }
   
-  p { @extend .lh-copy; }
+  p { @extend .b--red, .outline, .lh-copy; }
   
   img { @extend .db, .br1, .pb1, .pb2-ns; }
-  ul li { 
-  		@extend	.pb1, .pb2-ns, .pr1, .pr2-ns, .f3;
-  		list-style-type: circle; 
-
-  		}
+  ul li { @extend .f1; }
   ol li { list-style-type: upper-roman; }
 }
