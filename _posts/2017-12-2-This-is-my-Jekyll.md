@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: single-column
 title:  WOohoo!
 date:   2017-12-02 15:27:28 -0400
 categories: 
