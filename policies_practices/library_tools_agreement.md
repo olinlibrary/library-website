@@ -1,5 +1,5 @@
 ---
-layout: single-column
+layout: post
 title: Library Tools Agreement
 ---
 {::options parse_block_html="true" /}

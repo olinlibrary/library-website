@@ -1,5 +1,5 @@
 ---
-layout: single-column
+layout: post
 title: Event Policy
 ---
 {::options parse_block_html="true" /}
