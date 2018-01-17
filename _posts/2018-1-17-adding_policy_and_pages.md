@@ -11,7 +11,12 @@ This tutorial assumes you've written a Markown document that you'd like to forma
 
 Posting a Markdown document this way will give it a title & direct link in the Footer, no other location.    
 
-![Posts are found in _posts > filename.md](/assets/img/footer.png)
+We'll be putting the document in one of the Footer Categories: **About Us**, **Library Guides**, **Olin Workshop on the Library** and **Policies & Practices**  Each of these Footer Categories has its own folder.  Save your document to the appropriate folder.   
+
+> When titling your documents, try to the current naming convention, which is **The_Document_Title.md**
+
+
+![here's the in _posts > filename.md](/assets/img/footer.png)
 
 
 
@@ -39,24 +44,21 @@ Reading more closely, you'll see the Footer Categories inside the **<article>** 
 
 ![article html code](/assets/img/article-code.png)
 
-Identify the Footer Category you'd like to add your document to.  Then, duplicate one of the **<li>**...**</li>**'s in that category and paste it beneath the last one. 
+Then, duplicate one of the **<li>**...**</li>**'s in that category and paste it beneath the last one. 
 
 ```
  <li class="...">
    <a class="..." href="../policies_practices/event_policy" title="event policy">Event Policy</a>
  </li>
  ```
-
 ![li html code](/assets/img/li-code.png) 
 
-Now edit the **<a>**...**</a>**
+Now edit the **href="..."** to the correct file path to the folder where you saved your document 
 
 ```
  <li class="...">
-   <a class="..." href="../policies_practices/FILENAME(without.md)" title="DESCRIPTION">DOCUMENT_TITLE</a>
+   <a class="..." href="../FOOTER_CATEGORY_FOLDER/FILENAME(without.md)" title="DESCRIPTION">DOCUMENT_TITLE</a>
  </li>
  ```
 
- Try and adhere to the current naming convention, which is **The_Document_Title**
-
-Cross your fingers and check the website.  
+Hit save.  Hold your breath. Refresh the website. Exhale.
