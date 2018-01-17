@@ -5,7 +5,7 @@ title: Safety Statement
 {::options parse_block_html="true" /}
 
 
-*This policy should be read in cooperation with with Use of Library Tools Agreement and Use of Space Policy.* 
+*This policy should be read in cooperation with with the [Library Tools Agreement](../policies_practices/library_tools_agreement) and Use of Space Policy.* 
 
 The Olin College Library is committed to building and supporting a safe, educational and enjoyable place for our community to use. Violation of this policy will result in removal of library privileges, including prohibition from use of library resources, including space.
 

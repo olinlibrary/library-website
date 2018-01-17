@@ -4,8 +4,7 @@ title: Event Policy
 ---
 {::options parse_block_html="true" /}
 
-Please follow these procedures when scheduling large events in our space.  Large events are understood as events which have the potential to disrupt the normal use of the Library. 
-m
+Please follow these procedures when scheduling large events in our space.  Large events are understood as events which have the potential to disrupt the normal use of the Library.  All events must comply with our [Code of Conduct](../policies_practices/code_of_conduct).
 
 
 ## Scheduling and Reservations 

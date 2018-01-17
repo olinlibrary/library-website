@@ -1,25 +1,27 @@
 ---
 layout: default
 ---
-<article class="post ph2 ph3-ns mw8 center" itemscope itemtype="http://schema.org/BlogPosting">
 
-    <h1 class="post-title" itemprop="name headline">{{ page.title | escape }}</h1>
-    <p class="post-meta">
-      <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+<article class="markdown cf post ph2 ph3-ns mw8 center" itemscope itemtype="http://schema.org/BlogPosting">
+  <header class="fn fl-ns w-50-ns pr4-ns">
+    <h1 class="f2 lh-title fw9 mb3 mt0 pt3 bw2" itemprop="name headline">{{ page.title | escape }}</h1>
+    <time class="post-meta" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
         {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
         {{ page.date | date: date_format }}
       </time>
       {% if page.author %}
         • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>
-      {% endif %}</p>
+      {% endif %}
+      <img>
+  </header>
+  <div class="fn fl-ns w-50-ns post-content" itemprop="articleBody">
+    <h3 class="f4 lh-title"></h3>
 
-      <section class="">
-        <div class="post-content" itemprop="articleBody">
-            {{ content }}
-        </div>
-      </section>
-      {% if site.disqus.shortname %}
+    <p class="">
+      {{ content }}
+    </p>
+     {% if site.disqus.shortname %}
          {% include disqus_comments.html %}
       {% endif %}
+  </div>
 </article>
-
