@@ -2,16 +2,17 @@
 layout: post
 title:  Adding Markdown Policy and Pages
 date:   2017-10-02 13:27:28 -0400
-categories: 
+toc: true
+categories:
 ---
 
-## Context  
+## Context
 
-This tutorial assumes you've written a Markown document that you'd like to formally add to website. You can brush up on [your Markdown here](/blog/writing_in_markdown/).  
+This tutorial assumes you've written a Markown document that you'd like to formally add to website. You can brush up on [your Markdown here](/blog/writing_in_markdown/).
 
-Posting a Markdown document this way will give it a title & direct link in the Footer, no other location.    
+Posting a Markdown document this way will give it a title & direct link in the Footer, no other location.
 
-We'll be putting the document in one of the Footer Categories: **About Us**, **Library Guides**, **Olin Workshop on the Library** and **Policies & Practices**  Each of these Footer Categories has its own folder.  Save your document to the appropriate folder.   
+We'll be putting the document in one of the Footer Categories: **About Us**, **Library Guides**, **Olin Workshop on the Library** and **Policies & Practices**  Each of these Footer Categories has its own folder.  Save your document to the appropriate folder.
 
 > When titling your documents, try to the current naming convention, which is **The_Document_Title.md**
 
@@ -24,7 +25,7 @@ We'll be putting the document in one of the Footer Categories: **About Us**, **L
 
 Open your preferred code editor *(folks around here seem to lean toward [Atom](https://atom.io/), but there's a [Sublime Text](https://www.sublimetext.com/) contingent too.)*
 
-Now, from the editor open **footer.html**  
+Now, from the editor open **footer.html**
 
 >  footer.html is found in **_includes > footer.html**
 
@@ -44,16 +45,16 @@ Reading more closely, you'll see the Footer Categories inside the **<article>** 
 
 ![article html code](/assets/img/article-code.png)
 
-Then, duplicate one of the **<li>**...**</li>**'s in that category and paste it beneath the last one. 
+Then, duplicate one of the **<li>**...**</li>**'s in that category and paste it beneath the last one.
 
 ```
  <li class="...">
    <a class="..." href="../policies_practices/event_policy" title="event policy">Event Policy</a>
  </li>
  ```
-![li html code](/assets/img/li-code.png) 
+![li html code](/assets/img/li-code.png)
 
-Now edit the **href="..."** to the correct file path to the folder where you saved your document 
+Now edit the **href="..."** to the correct file path to the folder where you saved your document
 
 ```
  <li class="...">
