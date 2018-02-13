@@ -37,5 +37,14 @@ _stay tuned!_
 
 1. Clone the repo `git clone https://github.com/olinlibrary/library-website.git`.
 2. Install [Ruby](https://www.ruby-lang.org/en/documentation/installation/) and [Jekyll](https://jekyllrb.com/docs/installation/).
-3. Run `jekyll serve` and navigate to the url given to view the website.
-4. If step 3 gives errors, run `sudo bundle install`, then `bundle exec jekyll serve`
+3. Run `bundle install` to install dependencies & plugins (install bundler if you don't have it installed by running `gem install bundler`)
+4. Run Jekyll server locally
+  - Run `jekyll serve` and navigate to the url given to view the website.
+  - If `jekyll serve` outputs errors, then run , then `bundle exec jekyll serve`
+
+## How the Table of Contents work:
+- All layouts that use "default.html" will automatically have table of contents generated
+underneath header, and anchors are injected to the corresponding contents.
+- To disable table of contents for a specific post or layout, insert `toc: false` underneath
+`layout: default`.
+- The default toc value is configured in _config.yml, but you shouldn't need to edit this file.
