@@ -3,6 +3,7 @@
 
 @import 'tachyons';
 
+
 article.post {
 	h1 { @extend .f1, b; }
   	h2 { @extend .f2, b, .bb, .b--light-gray, .pb1, .mt4; }
@@ -197,4 +198,7 @@ article.page {
 
 .accordion {
 	h3 {@extend .pt2, .pb3, .f3; }
+}
+.octicon{
+	vertical-align: top;
 }
