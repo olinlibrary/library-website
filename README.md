@@ -42,8 +42,8 @@ _stay tuned!_
   - Run `jekyll serve` and navigate to the url given to view the website.
   - If `jekyll serve` outputs errors, then run , then `bundle exec jekyll serve`
 
-## How the Table of Contents work:
-- All layouts that use "default.html" will automatically have table of contents generated
+## How Table of Contents(jekyll-toc) work:
+- All layouts that use <i>default.html</i> will automatically have table of contents generated
 underneath header, and anchors are injected to the corresponding contents.
 - To disable table of contents for a specific post or layout, insert `toc: false` underneath
 `layout: default`.
