@@ -27,6 +27,13 @@ github_username:  jekyll
 collections:
   posts:
     permalink: /blog/:title.html
+# default settings
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      toc: true
 
 # Build settings
 markdown: kramdown
