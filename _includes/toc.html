@@ -1,0 +1,7 @@
+{% if page.toc == true %}
+  <h5 class="toc-header">
+    Table of Contents
+  </h5>
+{% endif %}
+
+{{content | toc_only}}
