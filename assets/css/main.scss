@@ -3,6 +3,27 @@
 
 @import 'tachyons';
 
+$phone-width: 300px;
+$tablet-width: 768px;
+$desktop-width: 1024px;
+
+@mixin phone {
+  @media (min-width: #{$phone-width}) and (max-width: #{$tablet-width - 1px}) {
+    @content;
+  }
+}
+@mixin tablet {
+  @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$desktop-width}) {
+    @content;
+  }
+}
+
 
 article.post {
 	h1 { @extend .f1, b; }
@@ -193,15 +214,24 @@ article.page {
 
 // table of contents settings
 .toc-header	{
-	@extend .mw8, .center, .pa2, .navy ;
-}
-.section-nav {
-  @extend .mw8, .center, .pa2, .navy ;
+	@extend .mw8, .center, .pa2, .navy;
 }
 
+.section-nav {
+	@extend .mw8, .center, .pa2, .navy;
+	@include phone {
+		display: none;
+	}
+}
+.toc-header:hover + .section-nav {
+	@include phone {
+		display: block;
+	}
+}
 .accordion {
 	h3 {@extend .pt2, .pb3, .f3; }
 }
+// anchors
 .octicon{
 	vertical-align: top;
 }
