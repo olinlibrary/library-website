@@ -2,14 +2,12 @@
 <html lang="{{ page.lang | default: site.lang | default: "en" }}">
 
   {% include head.html %}
-
   <body class="sans-serif">
-
     {% include header.html %}
-
+    {% include toc.html %}
     <main class="page-content" aria-label="Content">
       <div class="wrapper lh-copy">
-        {{ content }}
+        {{ content | inject_anchors}}
       </div>
     </main>
 

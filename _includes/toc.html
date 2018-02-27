@@ -1,0 +1,15 @@
+<!-- Table of Contents template -->
+
+<!-- only shows up if the page has toc == true -->
+{% if page.toc == true %}
+    <div class="mw8 center pa2 pa3-ns">
+        <input type='checkbox' id=toggle />
+        <label class="toc-header " for=toggle>
+            Table of Contents
+            <span class="octicon octicon-chevron-down"></span>
+            <span class="octicon octicon-chevron-up"></span>
+        </label>
+        {{content | toc_only}}
+    </div>
+
+{% endif %}

@@ -21,6 +21,8 @@ GEM
       jekyll (~> 3.3)
     jekyll-sass-converter (1.5.0)
       sass (~> 3.4)
+    jekyll-toc (0.5.2)
+      nokogiri (~> 1.6)
     jekyll-watch (1.5.0)
       listen (~> 3.0, < 3.1)
     kramdown (1.15.0)
@@ -29,8 +31,11 @@ GEM
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
     mercenary (0.3.6)
+    mini_portile2 (2.3.0)
     minima (2.1.1)
       jekyll (~> 3.3)
+    nokogiri (1.8.2)
+      mini_portile2 (~> 2.3.0)
     pathutil (0.16.0)
       forwardable-extended (~> 2.6)
     public_suffix (3.0.0)
@@ -51,8 +56,9 @@ PLATFORMS
 DEPENDENCIES
   jekyll (~> 3.6.0)
   jekyll-feed (~> 0.6)
+  jekyll-toc
   minima (~> 2.0)
   tzinfo-data
 
 BUNDLED WITH
-   1.15.3
+   1.16.1

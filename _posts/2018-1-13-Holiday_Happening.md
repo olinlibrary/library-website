@@ -2,28 +2,29 @@
 layout: post
 title:  the Holiday Happening
 date:   2017-12-02 15:27:28 -0400
-categories: 
+toc: true
+categories:
 ---
 
-### Here's a different kind of page.  
+### Here's a different kind of page.
 
 I really don't know what will be appropriate to put here.  I think that there's an image of Carment that'd suit quite well.  Perhaps this on?
 
 ![2017 Invitation, including faculty photobooth from the first Happening, 2015](/assets/img/Happening.jpg)
 *Small [interactive invite](http://rewritethelibrary.org/holiday2017/), courtesy of Adam Novotny.*
 
- Goodnight.  
+ Goodnight.
 
 #### A Bear?
- So we had an interactive Bear.  It began with a meeting and an amazon product. 
+ So we had an interactive Bear.  It began with a meeting and an amazon product.
 
 ![photo of carmen papalia talk, Olin college Library 2015](/assets/img/theBear.png)
 
  [Happening Bear Code](https://github.com/phuston/holidaybear), Courtesy of Patrick Huston, '18
-	
+
  Create (and add) the most incongruous, but suprisingly relevant, mixed/multi-media catalog record
 
-- LC Catalog it (create Subject Fields) 
+- LC Catalog it (create Subject Fields)
 - Create supplemental Markdown elements to capture it.
 - Larger Exercise
 
@@ -33,7 +34,7 @@ I really don't know what will be appropriate to put here.  I think that there's 
 
 ### Create (and add) the most incongruous, but suprisingly relevant, mixed/multi-media catalog record
 
-- LC Catalog it (create Subject Fields) 
+- LC Catalog it (create Subject Fields)
 - Create supplemental Markdown elements to capture it.
 - Larger Exercise
 
