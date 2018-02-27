@@ -213,20 +213,42 @@ article.page {
 }
 
 // table of contents settings
-.toc-header	{
+.toc-header, .section-nav > li{
 	@extend .mw8, .center, .pa2, .navy;
+
 }
-.section-nav > li{
-	@extend .mw8, .center, .pa2, .navy;
-	@include phone {
-		display: none;
-	}
+
+// responsive toggle magic
+input[type=checkbox] {
+  display: none;
 }
-.toc-header:hover + .section-nav > li {
-	@include phone {
-		display: list-item;
-	}
+
+input[type=checkbox]:checked ~ label + .section-nav > li {
+  @include phone{
+      display: list-item;
+  }
+  @include tablet{
+      display: list-item;
+  }
 }
+span.octicon-chevron-up, span.octicon-chevron-down{
+    @include desktop{
+        display:none;
+    }
+}
+
+input[type=checkbox] ~ label + .section-nav > li {
+  @include phone{
+      height: 0;
+      display: none;
+  }
+  @include tablet{
+      height: 0;
+      display: none;
+  }
+}
+
+// anchors
 .accordion {
 	h3 {@extend .pt2, .pb3, .f3; }
 }

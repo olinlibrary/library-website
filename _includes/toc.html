@@ -2,9 +2,12 @@
 
 <!-- only shows up if the page has toc == true -->
 {% if page.toc == true %}
-  <h5 class="toc-header">
-    Table of Contents
-  </h5>
+    <input type='checkbox' id=toggle />
+    <label class="toc-header" for=toggle>
+        Table of Contents
+        <span class="octicon octicon-chevron-down"></span>
+        <span class="octicon octicon-chevron-up"></span>
+    </label>
 {% endif %}
 
 {{content | toc_only}}
