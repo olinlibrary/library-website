@@ -213,23 +213,67 @@ article.page {
 }
 
 // table of contents settings
-.toc-header, .section-nav > li{
-	@extend .mw8, .center, .pa2, .navy;
-
+// .section-nav > li{
+// 	@extend .mw8, .center, .pa2, .navy;
+// }
+.toc-header{
+    @extend .mw8, .pa2, .center, ;
 }
-
 // responsive toggle magic
 input[type=checkbox] {
   display: none;
 }
 
-input[type=checkbox]:checked ~ label + .section-nav > li {
+input[type=checkbox]:checked ~ label + .section-nav > li{
   @include phone{
       display: list-item;
   }
   @include tablet{
       display: list-item;
   }
+}
+
+input[type=checkbox] ~ label + .section-nav > li {
+  @include phone{
+      // height: 0;
+      display: none;
+  }
+  @include tablet{
+      // height: 0;
+      display: none;
+  }
+}
+input[type=checkbox]:checked ~ label > span.octicon-chevron-up {
+  @include phone{
+      display: inline-block;
+  }
+  @include tablet{
+      display: inline-block;
+  }
+}
+input[type=checkbox]:checked ~ label > span.octicon-chevron-down {
+  @include phone{
+      display: inline-block;
+  }
+  @include tablet{
+      display: inline-block;
+  }
+}
+input[type=checkbox] ~ label > span.octicon-chevron-up {
+    @include phone{
+        display: none;
+    }
+    @include tablet{
+        display: none;
+    }
+}
+input[type=checkbox]:checked ~ label > span.octicon-chevron-down {
+    @include phone{
+        display: none;
+    }
+    @include tablet{
+        display: none;
+    }
 }
 span.octicon-chevron-up, span.octicon-chevron-down{
     @include desktop{
@@ -237,22 +281,11 @@ span.octicon-chevron-up, span.octicon-chevron-down{
     }
 }
 
-input[type=checkbox] ~ label + .section-nav > li {
-  @include phone{
-      height: 0;
-      display: none;
-  }
-  @include tablet{
-      height: 0;
-      display: none;
-  }
-}
-
 // anchors
 .accordion {
 	h3 {@extend .pt2, .pb3, .f3; }
 }
 // anchors
-.octicon{
+span.octicon {
 	vertical-align: top;
 }
