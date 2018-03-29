@@ -4,7 +4,7 @@ title: Using Our Library
 ---
 {::options parse_block_html="true" /}
 
-<div class="fl w-100 fl w-50-ns pr4-ns pl2-m pr0">
+<div class="fl w-100 fl w-70-ns pr4-ns pl2-m pr0">
 
 ## Access to Resources
 
@@ -30,9 +30,7 @@ The Library hosts a range of programming. Examples include: SLAC (Stay Late and 
 
 See our Events Policy (appendix)
 
-</div>
 
-<div class="fl w-100 fl w-50-ns pr4-ns pl2-m pr0">
 
 ## ... as a Service
 
