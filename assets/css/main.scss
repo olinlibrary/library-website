@@ -213,11 +213,31 @@ article.page {
 }
 
 // table of contents settings
-// .section-nav > li{
-// 	@extend .mw8, .center, .pa2, .navy;
-// }
+.toc{
+    position:sticky;
+    @include desktop{
+        top:5vh;
+    }
+    @include phone{
+        top:0;
+        z-index:999;
+        background-color:white;
+    }
+    @include tablet{
+        top:0;
+        z-index:999;
+        background-color:white;
+    }
+
+}
 .toc-header{
     @extend .mw8, .pa2, .center, ;
+    @include phone{
+        font-size:3.5vh;
+    }
+    @include tablet{
+        font-size:4vh;
+    }
 }
 // responsive toggle magic
 input[type=checkbox] {
