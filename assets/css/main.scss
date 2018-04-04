@@ -216,6 +216,10 @@ article.page {
 // .section-nav > li{
 // 	@extend .mw8, .center, .pa2, .navy;
 // }
+.toc{
+    position:sticky;
+    top:5vh;
+}
 .toc-header{
     @extend .mw8, .pa2, .center, ;
 }
