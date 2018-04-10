@@ -6,6 +6,11 @@ $(document).ready(function(){
     $('.toc-entry a').click(function(){
        $('#toggle').attr('checked', false);
     })
+    $('.anchor').parent().hover(function(){
+        $('.anchor > span.octicon').show();
+    }, function(){
+        $('.anchor > span.octicon').hide();
+    });
     var scrollTime= 500;
     $('a[href^="#"]').click(function() {
         // Need both `html` and `body` for full browser support
