@@ -6,8 +6,11 @@ $(document).ready(function(){
     $('.toc-entry a').click(function(){
        $('#toggle').attr('checked', false);
     })
+
     $('.anchor').parent().hover(function(){
+        if($(window).width() > 1024){
         $(this).find('.anchor > span.octicon').show();
+        }
     }, function(){
         $(this).find('.anchor > span.octicon').hide();
     });
