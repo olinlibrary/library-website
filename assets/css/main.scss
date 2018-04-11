@@ -307,5 +307,9 @@ span.octicon-chevron-up, span.octicon-chevron-down{
 }
 // anchors
 span.octicon {
-	vertical-align: top;
+    display:none;
+    float: left;
+    padding-right: 4px;
+    margin-left: -20px;
+    line-height: 3;
 }
