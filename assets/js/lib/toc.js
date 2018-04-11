@@ -7,9 +7,9 @@ $(document).ready(function(){
        $('#toggle').attr('checked', false);
     })
     $('.anchor').parent().hover(function(){
-        $('.anchor > span.octicon').show();
+        $(this).find('.anchor > span.octicon').show();
     }, function(){
-        $('.anchor > span.octicon').hide();
+        $(this).find('.anchor > span.octicon').hide();
     });
     var scrollTime= 500;
     $('a[href^="#"]').click(function() {
