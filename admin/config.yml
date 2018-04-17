@@ -3,7 +3,7 @@ backend:
   branch: master
   publish_mode: editorial_workflow
   collections:
-
+  media_folder: "assets/img"
   - name: "posts" # Used in routes, e.g., /admin/collections/blog
     label: "Post" # Used in the UI
     folder: "content/post" # The path to the folder where the documents are stored
