@@ -1,9 +1,9 @@
 backend:
   name: git-gateway
   branch: master
-  publish_mode: editorial_workflow
-  media_folder: "assets/img"
-  collections:
+publish_mode: editorial_workflow
+media_folder: "assets/img"
+collections:
   - name: "posts" # Used in routes, e.g., /admin/collections/blog
     label: "Post" # Used in the UI
     folder: "content/post" # The path to the folder where the documents are stored
@@ -27,5 +27,3 @@ backend:
       - label: "Body"
         name: "body"
         widget: "markdown"
-
-
