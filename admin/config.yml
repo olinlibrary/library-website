@@ -12,7 +12,7 @@ collections:
     folder: "about/" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
-    extension: html
+    extension: html, markdown, md
     fields: # The fields for each document, usually in front matter
       - label: "Title"
         name: "title"
@@ -33,7 +33,7 @@ collections:
     folder: "about_us/"
     create: true
     slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
-    extension: html
+    extension: html, markdown, md
     fields: # The fields for each document, usually in front matter
       - label: "Title"
         name: "title"
@@ -54,7 +54,7 @@ collections:
     folder: "dispatches/"
     create: true
     slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
-    extension: html
+    extension: html, markdown, md
     fields: # The fields for each document, usually in front matter
       - label: "Title"
         name: "title"
@@ -75,7 +75,7 @@ collections:
     folder: "policies_practices/"
     create: true
     slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
-    extension: html
+    extension: html, markdown, md
     fields: # The fields for each document, usually in front matter
       - label: "Title"
         name: "title"
@@ -96,7 +96,7 @@ collections:
     folder: "using_our_library/"
     create: true
     slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
-    extension: html
+    extension: html, markdown, md
     fields: # The fields for each document, usually in front matter
       - label: "Title"
         name: "title"
@@ -117,7 +117,7 @@ collections:
     folder: "what_we_have/"
     create: true
     slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
-    extension: html
+    extension: html, markdown, md
     fields: # The fields for each document, usually in front matter
       - label: "Title"
         name: "title"
