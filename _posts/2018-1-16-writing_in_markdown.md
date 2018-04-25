@@ -3,7 +3,6 @@ layout: post
 title:  Writing in Markdown
 date:   2017-10-13 15:27:28 -0400
 toc: true
-categories:
 ---
 
 ## Context

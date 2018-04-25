@@ -3,7 +3,6 @@ layout: post
 title:  Adding Markdown Policy and Pages
 date:   2017-10-02 13:27:28 -0400
 toc: true
-categories:
 ---
 
 ## Context
