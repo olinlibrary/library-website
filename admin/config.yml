@@ -7,12 +7,31 @@ backend:
 publish_mode: editorial_workflow
 media_folder: "assets/img"
 collections:
+  - name: "post"
+    label: "Post"
+    folder: "_posts/"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - label: "Title"
+        name: "title"
+        widget: "string"
+      - label: "Layout"
+        name: "layout"
+        widget: "select"
+        options: "post"
+      - label: "Table of Contents"
+        name: "toc"
+        widget: "boolean"
+        required: "false"
+      - label: "Body"
+        name: "body"
+        widget: "markdown"
   - name: "about" # Used in routes, e.g., /admin/collections/blog
     label: "About" # Used in the UI
     folder: "about/" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
-    extension: html
     fields: # The fields for each document, usually in front matter
       - label: "Title"
         name: "title"
@@ -20,20 +39,19 @@ collections:
       - label: "Layout"
         name: "layout"
         widget: "select"
-        options: ["default", "post", "page", "single-column", "home"]
-      - label: "Body"
-        name: "body"
-        widget: "markdown"
       - label: "Table of Contents"
         name: "toc"
         widget: "boolean"
         required: "false"
+        options: ["default", "post", "page", "single-column", "home"]
+      - label: "Body"
+        name: "body"
+        widget: "markdown"
   - name: "about_us"
     label: "About Us"
     folder: "about_us/"
     create: true
     slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
-    extension: html
     fields: # The fields for each document, usually in front matter
       - label: "Title"
         name: "title"
@@ -41,20 +59,19 @@ collections:
       - label: "Layout"
         name: "layout"
         widget: "select"
-        options: ["default", "post", "page", "single-column", "home"]
-      - label: "Body"
-        name: "body"
-        widget: "markdown"
       - label: "Table of Contents"
         name: "toc"
         widget: "boolean"
         required: "false"
+        options: ["default", "post", "page", "single-column", "home"]
+      - label: "Body"
+        name: "body"
+        widget: "markdown"
   - name: "dispatches"
     label: "Dispatches"
     folder: "dispatches/"
     create: true
     slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
-    extension: html
     fields: # The fields for each document, usually in front matter
       - label: "Title"
         name: "title"
@@ -63,13 +80,13 @@ collections:
         name: "layout"
         widget: "select"
         options: ["default", "post", "page", "single-column", "home"]
-      - label: "Body"
-        name: "body"
-        widget: "markdown"
       - label: "Table of Contents"
         name: "toc"
         widget: "boolean"
         required: "false"
+      - label: "Body"
+        name: "body"
+        widget: "markdown"
   - name: "policies_practices"
     label: "Policies and practices"
     folder: "policies_practices/"
@@ -84,19 +101,18 @@ collections:
         name: "layout"
         widget: "select"
         options: ["default", "post", "page", "single-column", "home"]
-      - label: "Body"
-        name: "body"
-        widget: "markdown"
       - label: "Table of Contents"
         name: "toc"
         widget: "boolean"
         required: "false"
+      - label: "Body"
+        name: "body"
+        widget: "markdown"
   - name: "using_our_library"
     label: "Using our Library"
     folder: "using_our_library/"
     create: true
     slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
-    extension: html
     fields: # The fields for each document, usually in front matter
       - label: "Title"
         name: "title"
@@ -105,19 +121,18 @@ collections:
         name: "layout"
         widget: "select"
         options: ["default", "post", "page", "single-column", "home"]
-      - label: "Body"
-        name: "body"
-        widget: "markdown"
       - label: "Table of Contents"
         name: "toc"
         widget: "boolean"
         required: "false"
+      - label: "Body"
+        name: "body"
+        widget: "markdown"
   - name: "what_we_have"
     label: "What We Have"
     folder: "what_we_have/"
     create: true
     slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
-    extension: html
     fields: # The fields for each document, usually in front matter
       - label: "Title"
         name: "title"
@@ -126,10 +141,10 @@ collections:
         name: "layout"
         widget: "select"
         options: ["default", "post", "page", "single-column", "home"]
-      - label: "Body"
-        name: "body"
-        widget: "markdown"
       - label: "Table of Contents"
         name: "toc"
         widget: "boolean"
         required: "false"
+      - label: "Body"
+        name: "body"
+        widget: "markdown"
