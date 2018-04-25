@@ -3,7 +3,6 @@ layout: post
 title:  the Holiday Happening
 date:   2017-12-02 15:27:28 -0400
 toc: true
-categories:
 ---
 
 ### Here's a different kind of page.
