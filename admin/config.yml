@@ -7,31 +7,9 @@ backend:
 publish_mode: editorial_workflow
 media_folder: "assets/img"
 collections:
-  - name: "home" # Used in routes, e.g., /admin/collections/blog
-    label: "Home" # Used in the UI
-    folder: "/" # The path to the folder where the documents are stored
-    create: false # Allow users to create new documents in this collection
-    slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
-    extension: "html"
-    fields: # The fields for each document, usually in front matter
-      - label: "Title"
-        name: "title"
-        widget: "string"
-        required : "false"
-      - label: "Layout"
-        name: "layout"
-        widget: "select"
-        required: "false"
-      - label: "Table of Contents"
-        name: "toc"
-        widget: "boolean"
-        required: "false"
-        options: ["default", "post", "page", "single-column", "home"]
-      - label: "Body"
-        name: "body"
-        widget: "markdown"
-  - name: "post"
-    label: "Post"
+  - name: "posts"
+    label: "Posts"
+    label_singular: "Post"
     folder: "_posts/"
     create: true
     slug: "{{year}}-{{month}}-{{day}}_{{slug}}"
@@ -43,7 +21,7 @@ collections:
         name: "layout"
         widget: "select"
         options: "post"
-      - label: "Date"
+      - label: "Publish Date"
         name: "date"
         widget: "date"
       - label: "Table of Contents"
