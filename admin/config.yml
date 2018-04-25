@@ -75,9 +75,6 @@ collections:
     folder: "policies_practices/"
     create: true
     slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
-    extension:
-      - "html"
-      - "markdown"
     format: "frontmatter"
     fields: # The fields for each document, usually in front matter
       - label: "Title"
