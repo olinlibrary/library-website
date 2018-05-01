@@ -1,5 +1,5 @@
 ---
-title: ' ￼ ￼ ￼ ￼ ￼ ￼ ￼ ￼ ￼ ￼ ￼ Rich text MarkdownIntroducing.. Netlify!'
+title: Introducing.. Netlify!
 layout: post
 date: '2018-04-25'
 toc: true
