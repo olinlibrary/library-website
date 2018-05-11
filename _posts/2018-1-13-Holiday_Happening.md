@@ -2,7 +2,7 @@
 title: the Holiday Happening
 layout: post
 date: '2017-12-02 15:27:28 -0400'
-toc: true
+toc: false
 ---
 ### Here's a different kind of page...
 
