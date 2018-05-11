@@ -13,14 +13,10 @@
 <body>
 <div id="logged-in" style="display: none">
     <p>You are currently logged in with user email '<span id="username"></span>',
-        and you should be able to proceed to the <a href="/test/">Test Folder</a>.</p>
-    <p>Or you may <a href="#" onclick="window.netlifyIdentity.open()">Logout</a>.</p>
+     <a href="#" onclick="window.netlifyIdentity.open()">Logout</a>.</p>
 </div>
 <div id="not-logged-in" style="display: none">
-    <p>You are not currently logged in, please <a href="#" onclick="window.netlifyIdentity.open()">login first</a>,
-        before proceeding to the <a href="/test/">Test Folder</a>.</p>
-    <p>If you proceed to the test folder without logging in, that should fail with you being redirected
-        to the login page.</p>
+    <p>You are not currently logged in, please <a href="#" onclick="window.netlifyIdentity.open()">login first</a> </p>
 </div>
 <script type="text/javascript">
     $(document).ready(function() {
