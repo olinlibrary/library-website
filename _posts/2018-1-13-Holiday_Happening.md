@@ -1,8 +1,10 @@
 ---
 title: the Holiday Happening
 layout: post
-date: '2017-12-02 15:27:28 -0400'
-toc: false
+title:  the Holiday Happening
+date:   2017-12-02 15:27:28 -0400
+toc: true
+
 ---
 ### Here's a different kind of page...
 
