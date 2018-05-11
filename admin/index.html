@@ -7,9 +7,51 @@
 
   <!-- Include the styles for the Netlify CMS UI, after your own styles -->
   <link rel="stylesheet" href="https://unpkg.com/netlify-cms@^1.3.5/dist/cms.css" />
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script type="text/javascript" src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </head>
 <body>
+<div id="logged-in" style="display: none">
+    <p>You are currently logged in with user email '<span id="username"></span>',
+     <a href="#" onclick="window.netlifyIdentity.open()">Logout</a>.</p>
+</div>
+<div id="not-logged-in" style="display: none">
+    <p>You are not currently logged in, please <a href="#" onclick="window.netlifyIdentity.open()">login first</a> </p>
+</div>
+<script type="text/javascript">
+    $(document).ready(function() {
+        window.netlifyIdentity.init();
+        function updateLoggedIn() {
+            var loggedIn = false;
+            if (window.netlifyIdentity && window.netlifyIdentity.gotrue) {
+                var user = window.netlifyIdentity.gotrue.currentUser();
+                console.log('user is ', user);
+                loggedIn = user ? true : false;
+                if (user) {
+                  console.log('user.app_metadata is ', JSON.stringify(user.app_metadata));
+                  console.log('user.email is ', user.email);
+                  console.log('access token is ' + user.token.access_token);
+                  user.jwt().then((jwt) => {
+                    console.log('this would be a good time to save this cookie');
+                    console.log(jwt);
+                  });
+                }
+            }
+            if (loggedIn) {
+                $('#username').text(user.email);
+                $('#logged-in').show();
+                $('#not-logged-in').hide();
+            }
+            else {
+                $('#logged-in').hide();
+                $('#not-logged-in').show();
+            }
+        }
+        window.netlifyIdentity.on("login", updateLoggedIn);
+        window.netlifyIdentity.on("logout", updateLoggedIn);
+        updateLoggedIn();
+    });
+</script>
   <!-- Include the script that builds the page and powers Netlify CMS -->
   <script src="https://unpkg.com/netlify-cms@^1.3.5/dist/cms.js"></script>
 </body>

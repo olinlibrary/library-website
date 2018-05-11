@@ -3,14 +3,15 @@ backend:
   branch: master
   accept_roles:
     - admin
-    - editor
 publish_mode: editorial_workflow
 media_folder: "assets/img"
 collections:
-  - name: "posts"
-    label: "Posts"
+  - name: "posts(html)"
+    label: "Posts(html)"
     folder: "_posts/"
     create: true
+    format: "frontmatter"
+    extension: "html"
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
       - label: "Title"
@@ -32,10 +33,39 @@ collections:
         widget: "markdown"
     meta:
       - {label: "SEO Description", name: "description", widget: "text"}
-  - name: "about" # Used in routes, e.g., /admin/collections/blog
-    label: "About" # Used in the UI
+  - name: "posts"
+    label: "Posts"
+    folder: "_posts/"
+    create: true
+    format: "frontmatter"
+    extension: "md"
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - label: "Title"
+        name: "title"
+        widget: "string"
+      - label: "Layout"
+        name: "layout"
+        widget: "select"
+        options: ["post"]
+      - label: "Publish Date"
+        name: "date"
+        widget: "date"
+      - label: "Table of Contents"
+        name: "toc"
+        widget: "boolean"
+        required: false
+      - label: "Body"
+        name: "body"
+        widget: "markdown"
+    meta:
+      - {label: "SEO Description", name: "description", widget: "text"}
+  - name: "about(html)" # Used in routes, e.g., /admin/collections/blog
+    label: "About(html)" # Used in the UI
     folder: "about/" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
+    format: "frontmatter"
+    extension: "html"
     slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter
       - label: "Title"
@@ -48,7 +78,29 @@ collections:
       - label: "Table of Contents"
         name: "toc"
         widget: "boolean"
-        required: "false"
+        required: false
+      - label: "Body"
+        name: "body"
+        widget: "markdown"
+  - name: "about" # Used in routes, e.g., /admin/collections/blog
+    label: "About" # Used in the UI
+    folder: "about/" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    format: "frontmatter"
+    extension: "md"
+    slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    fields: # The fields for each document, usually in front matter
+      - label: "Title"
+        name: "title"
+        widget: "string"
+      - label: "Layout"
+        name: "layout"
+        options: ["default", "post", "page", "single-column", "home"]
+        widget: "select"
+      - label: "Table of Contents"
+        name: "toc"
+        widget: "boolean"
+        required: false
       - label: "Body"
         name: "body"
         widget: "markdown"
@@ -68,13 +120,15 @@ collections:
       - label: "Table of Contents"
         name: "toc"
         widget: "boolean"
-        required: "false"
+        required: false
       - label: "Body"
         name: "body"
         widget: "markdown"
-  - name: "dispatches"
-    label: "Dispatches"
+  - name: "dispatches(html)"
+    label: "Dispatches(html)"
     folder: "dispatches/"
+    format: "frontmatter"
+    extension: "html"
     create: true
     slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter
@@ -88,7 +142,29 @@ collections:
       - label: "Table of Contents"
         name: "toc"
         widget: "boolean"
-        required: "false"
+        required: false
+      - label: "Body"
+        name: "body"
+        widget: "markdown"
+  - name: "dispatches"
+    label: "Dispatches"
+    folder: "dispatches/"
+    format: "frontmatter"
+    extension: "md"
+    create: true
+    slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    fields: # The fields for each document, usually in front matter
+      - label: "Title"
+        name: "title"
+        widget: "string"
+      - label: "Layout"
+        name: "layout"
+        widget: "select"
+        options: ["default", "post", "page", "single-column", "home"]
+      - label: "Table of Contents"
+        name: "toc"
+        widget: "boolean"
+        required: false
       - label: "Body"
         name: "body"
         widget: "markdown"
@@ -109,7 +185,7 @@ collections:
       - label: "Table of Contents"
         name: "toc"
         widget: "boolean"
-        required: "false"
+        required: false
       - label: "Body"
         name: "body"
         widget: "markdown"
@@ -129,13 +205,15 @@ collections:
       - label: "Table of Contents"
         name: "toc"
         widget: "boolean"
-        required: "false"
+        required: false
       - label: "Body"
         name: "body"
         widget: "markdown"
-  - name: "what_we_have"
-    label: "What We Have"
+  - name: "what_we_have(html)"
+    label: "What We Have(html)"
     folder: "what_we_have/"
+    format: "frontmatter"
+    extension: "html"
     create: true
     slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter
@@ -149,7 +227,29 @@ collections:
       - label: "Table of Contents"
         name: "toc"
         widget: "boolean"
-        required: "false"
+        required: false
+      - label: "Body"
+        name: "body"
+        widget: "markdown"
+  - name: "what_we_have"
+    label: "What We Have"
+    folder: "what_we_have/"
+    format: "frontmatter"
+    extension: "md"
+    create: true
+    slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    fields: # The fields for each document, usually in front matter
+      - label: "Title"
+        name: "title"
+        widget: "string"
+      - label: "Layout"
+        name: "layout"
+        widget: "select"
+        options: ["default", "post", "page", "single-column", "home"]
+      - label: "Table of Contents"
+        name: "toc"
+        widget: "boolean"
+        required: false
       - label: "Body"
         name: "body"
         widget: "markdown"
