@@ -36,3 +36,5 @@ This post is an effort to unpack the process of making changes to the html, css,
 * Set status > **Ready**
 * **Save**
 * **Publish Now >**
+
+**Thanks Seungin!  Woohoo!**
