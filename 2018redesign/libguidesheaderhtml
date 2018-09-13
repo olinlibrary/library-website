@@ -1,0 +1,60 @@
+<!DOCTYPE HTML>
+
+<html>
+<head>
+
+
+<link rel="stylesheet" type="text/css" href="//libapps.s3.amazonaws.com/sites/10839/include/font-awesome.min.css">
+
+
+
+</head>
+				<!-- Header -->
+					<header id="header" class="alt">
+
+						<!-- Logo -->
+							<div class="logo">
+								<a href="index.html"><strong>The Library</strong> <span class="extra">Olin College of Engineering</span></a>
+							</div>
+
+						<!-- Nav -->
+							<nav id="nav">
+								<ul>
+									<li class="current"><a href="index.html">Home</a></li>
+									<li>
+										<a href="#">Access & Services <i class="fa fa-angle-down"></i></a>
+										<ul>
+											<li><a style="font-size:20px;" href="https://olin.libwizard.com/ill">Submit Interlibrary Loan Request</a></li>
+											<li><a style="font-size:20px;" href="https://libguides.olin.edu/policies/circulation">Check Out Policies</a></li>
+											<li><a style="font-size:20px;" href="https://libguides.olin.edu/collection-accounts/off-campus">Off Campus Access</a></li>
+											<li><a style="font-size:20px;" href="https://libguides.olin.edu/training">Training for Tools & Equipment</a></li>
+											<li><a style="font-size:20px;" href="https://libguides.olin.edu/collection-accounts/accounts">Library Accounts</a></li>
+											<li><a style="font-size:20px;" href="https://libguides.olin.edu/programs-services">Programs & Services</a></li>
+											<li><a style="font-size:20px;" href="https://library.olin.edu/about.html">Visiting the Library</a></li>
+										</ul>
+									</li>
+									<li>
+										<a href="#" >Collections <i class="fa fa-angle-down"></i></a>
+										<ul>
+											<li><a style="font-size:20px;" href="https://libguides.olin.edu/collection-accounts">The Local Collection</a></li>
+												<li><a style="font-size:20px;" href="https://olin.tind.io/collection/Tools%20%26%20Equipment?ln=en">Tools & Equipment</a></li>
+											<li><a style="font-size:20px;" href="https://libguides.olin.edu/policies/collection">Request a Purchase</a></li>
+											<li><a style="font-size:20px;" href="https://libguides.olin.edu/collection-accounts/repository">Institutional Repository</a></li>
+											<li><a style="font-size:20px;" href="http://libguides.olin.edu/az.php">A to Z Database List</a></li>
+											<li><a style="font-size:20px;" href="http://search.ebscohost.com/login.aspx?authtype=ip,guest&custid=s6621808&groupid=main&profile=eds">Cross-Platform Search</a></li>
+											<li><a style="font-size:20px;" href="http://search.ebscohost.com/login.aspx?authtype=ip,guest&custid=s6621808&profile=eds&defaultdb=edspub&plp=1&direct=true&groupid=main">Journal Search</a></li>
+
+										</ul>
+									</li>
+									<li><a href="#">News & Events <i class="fa fa-angle-down"></i></a>
+										<ul>
+											<li><a style="font-size:20px;" href="https://libguides.olin.edu/policies/events-space">Schedule an Event</a></li>
+											<li><a style="font-size:20px;" href="https://events.olin.build/calendar">olin.build Community Calendar</a></li>
+											<li><a style="font-size:20px;" href="http://www.olin.edu/events/event-calendar/">Official Event Calendar</a></li>
+											<li><a style="font-size:20px;" href="http://www.olin.edu/students/academic-calendar-deadlines-2018-19/">Academic Calendar</a></li>
+										</ul>
+									</li>
+								</ul>
+							</nav>
+
+					</header>
