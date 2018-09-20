@@ -3,15 +3,11 @@
 
   {% include head.html %}
   <body class="sans-serif">
+    <div id="wrapper" style="  padding-top: 20px;">
     {% include header.html %}
-    <main class="page-content" aria-label="Content">
-      <div class="wrapper lh-copy">
-        {{ content | inject_anchors}}
-      </div>
-    </main>
-
+    {{ content | inject_anchors}}
     {% include footer.html %}
-
+    </div>
   </body>
 
 </html>
