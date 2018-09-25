@@ -1,0 +1,121 @@
+$phone-width: 300px;
+$tablet-width: 768px;
+$desktop-width: 1024px;
+
+@mixin phone {
+  @media (min-width: #{$phone-width}) and (max-width: #{$tablet-width - 1px}) {
+    @content;
+  }
+}
+@mixin tablet {
+  @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$desktop-width}) {
+    @content;
+  }
+}
+
+.toc{
+    position:sticky;
+    @include desktop{
+        top:5vh;
+    }
+    @include phone{
+        top:0;
+        z-index:999;
+        background-color:white;
+    }
+    @include tablet{
+        top:0;
+        z-index:999;
+        background-color:white;
+    }
+
+}
+.toc-header{
+    @extend .mw8, .pa2, .center, ;
+    @include phone{
+        font-size:3.5vh;
+    }
+    @include tablet{
+        font-size:4vh;
+    }
+}
+// responsive toggle magic
+input[type=checkbox] {
+  display: none;
+}
+
+input[type=checkbox]:checked ~ label + .section-nav > li{
+  @include phone{
+      display: list-item;
+  }
+  @include tablet{
+      display: list-item;
+  }
+}
+
+input[type=checkbox] ~ label + .section-nav > li {
+  @include phone{
+      // height: 0;
+      display: none;
+  }
+  @include tablet{
+      // height: 0;
+      display: none;
+  }
+}
+input[type=checkbox]:checked ~ label > span.octicon-chevron-up {
+  @include phone{
+      display: inline-block;
+  }
+  @include tablet{
+      display: inline-block;
+  }
+}
+input[type=checkbox]:checked ~ label > span.octicon-chevron-down {
+  @include phone{
+      display: inline-block;
+  }
+  @include tablet{
+      display: inline-block;
+  }
+}
+input[type=checkbox] ~ label > span.octicon-chevron-up {
+    @include phone{
+        display: none;
+    }
+    @include tablet{
+        display: none;
+    }
+}
+input[type=checkbox]:checked ~ label > span.octicon-chevron-down {
+    @include phone{
+        display: none;
+    }
+    @include tablet{
+        display: none;
+    }
+}
+span.octicon-chevron-up, span.octicon-chevron-down{
+    @include desktop{
+        display:none;
+    }
+}
+
+// anchors
+.accordion {
+	h3 {@extend .pt2, .pb3, .f3; }
+}
+// anchors
+span.octicon {
+    display:none;
+    float: left;
+    padding-right: 4px;
+    margin-left: -20px;
+    line-height: 3;
+}

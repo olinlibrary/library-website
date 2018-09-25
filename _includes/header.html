@@ -5,14 +5,14 @@
 
     <!-- Logo -->
       <div class="logo">
-        <a href="index.html"><strong>The Library</strong> <span class="extra">Olin College of Engineering</span></a>
+        <a href="{{ "/" | prepend: site.baseurl }}"><strong>The Library</strong> <span class="extra">Olin College of Engineering</span></a>
       </div>
 
 
     <!-- Nav -->
       <nav id="nav">
         <ul>
-          <li class="current"><a href="index.html">Home</a></li>
+          <li class="current"><a href="{{ "/" | prepend: site.baseurl }}">Home</a></li>
           <li>
             <a href="#">Access & Services <i class="fa fa-angle-down"></i></a>
             <ul>
@@ -40,6 +40,7 @@
           </li>
           <li><a href="#">News & Events <i class="fa fa-angle-down"></i></a>
             <ul>
+              <li><a style="font-size:20px;" href="{{ "/blog" | prepend: site.baseurl }}">Blog</a></li>
               <li><a style="font-size:20px;" href="https://libguides.olin.edu/policies/events-space">Schedule an Event</a></li>
               <li><a style="font-size:20px;" href="https://events.olin.build/calendar">olin.build Community Calendar</a></li>
               <li><a style="font-size:20px;" href="http://www.olin.edu/events/event-calendar/">Official Event Calendar</a></li>
