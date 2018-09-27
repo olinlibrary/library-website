@@ -1,0 +1,37 @@
+---
+layout: default
+title: Blog
+---
+<section class="g-container">
+  {% for post in paginator.posts %}
+    <a href="{{post.url | prepend: site.baseurl}}">
+      <h1>{{ post.title }}</h1>
+    </a>
+    <p class="author">
+      <span class="date">{{ post.date | date: '%B %d, %Y' }}</span>
+    </p>
+    <div class="content">
+      {{ post.content | strip_html | truncatewords:75}} <br><br>
+      <a href="{{ post.url }}">Read more...</a><br><br>
+    </div>
+  {% endfor %}
+
+  <!-- Pagination links -->
+  <div class="g-center">
+    {% if paginator.previous_page %}
+      <a href="{{ paginator.previous_page_path }}" class="previous">
+        <i class="fa fa-arrow-left"></i>
+      </a>
+    {% endif %}
+    {% if paginator.page%}
+    <span class="page_number ">
+      Page: {{ paginator.page }}
+    </span>
+    {% endif %}
+    {% if paginator.next_page %}
+      <a href="{{ paginator.next_page_path }}" class="next">
+        <i class="fa fa-arrow-right"></i>
+      </a>
+    {% endif %}
+  </div>
+</section>

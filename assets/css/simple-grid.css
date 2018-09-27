@@ -1,0 +1,186 @@
+/**
+*** SIMPLE GRID
+*** (C) ZACH COLE 2016
+**/
+
+/* POSITIONING */
+
+.g-left {
+  text-align: left;
+}
+
+.g-right {
+  text-align: right;
+}
+
+.g-center {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.g-justify {
+  text-align: justify;
+}
+
+/* ==== GRID SYSTEM ==== */
+
+.g-container {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.g-container img {
+  width: 100%;
+}
+
+.g-row {
+  position: relative;
+  width: 100%;
+}
+
+.g-row [class^="g-col"] {
+  float: left;
+  margin: 0.5rem 2%;
+  min-height: 0.125rem;
+}
+
+.g-col-1,
+.g-col-2,
+.g-col-3,
+.g-col-4,
+.g-col-5,
+.g-col-6,
+.g-col-7,
+.g-col-8,
+.g-col-9,
+.g-col-10,
+.g-col-11,
+.g-col-12 {
+  width: 96%;
+}
+
+.g-col-1-sm {
+  width: 4.33%;
+}
+
+.g-col-2-sm {
+  width: 12.66%;
+}
+
+.g-col-3-sm {
+  width: 21%;
+}
+
+.g-col-4-sm {
+  width: 29.33%;
+}
+
+.g-col-5-sm {
+  width: 37.66%;
+}
+
+.g-col-6-sm {
+  width: 46%;
+}
+
+.g-col-7-sm {
+  width: 54.33%;
+}
+
+.g-col-8-sm {
+  width: 62.66%;
+}
+
+.g-col-9-sm {
+  width: 71%;
+}
+
+.g-col-10-sm {
+  width: 79.33%;
+}
+
+.g-col-11-sm {
+  width: 87.66%;
+}
+
+.g-col-12-sm {
+  width: 96%;
+}
+
+.g-row::after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+.g-hidden-sm {
+  display: none;
+}
+
+@media only screen and (min-width: 33.75em) {  /* 540px */
+  .g-container {
+    width: 80%;
+  }
+}
+
+@media only screen and (min-width: 45em) {  /* 720px */
+  .g-col-1 {
+    width: 4.33%;
+  }
+
+  .g-col-2 {
+    width: 12.66%;
+  }
+
+  .g-col-3 {
+    width: 21%;
+  }
+
+  .g-col-4 {
+    width: 29.33%;
+  }
+
+  .g-col-5 {
+    width: 37.66%;
+  }
+
+  .g-col-6 {
+    width: 46%;
+  }
+
+  .g-col-7 {
+    width: 54.33%;
+  }
+
+  .g-col-8 {
+    width: 62.66%;
+  }
+
+  .g-col-9 {
+    width: 71%;
+  }
+
+  .g-col-10 {
+    width: 79.33%;
+  }
+
+  .g-col-11 {
+    width: 87.66%;
+  }
+
+  .g-col-12 {
+    width: 96%;
+  }
+
+  .g-hidden-sm {
+    display: block;
+  }
+}
+
+@media only screen and (min-width: 60em) { /* 960px */
+  .g-container {
+    width: 75%;
+    max-width: 60rem;
+  }
+}

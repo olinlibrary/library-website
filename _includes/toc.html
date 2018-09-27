@@ -3,17 +3,17 @@
 <!-- only shows up if the page has toc == true -->
 {% if page.toc == true %}
     {% if page.layout == 'post' %}
-    <div class="toc fl w-100 pr4-ns pl2-m pr0">
+    <div class="toc">
     {% else %}
-    <div class="toc fl w-100 w-30-ns pr4-ns pl2-m pr0">
+    <div class="toc">
     {% endif %}
-        <input type='checkbox' id=toggle />
-        <label class="toc-header " for=toggle>
+        <label class="toc-header">
             Table of Contents
-            <span class="octicon octicon-chevron-down"></span>
-            <span class="octicon octicon-chevron-up"></span>
         </label>
         {{content | toc_only}}
     </div>
 
 {% endif %}
+<script>
+  var sticky = new Sticky('.toc');
+</script>
