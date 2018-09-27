@@ -1,0 +1,15 @@
+---
+label: Announcements
+hide_body: false
+is_partial: false
+fields:
+- type: boolean
+  label: Table of Contents
+  name: toc
+- type: text
+  name: layout
+  label: layout
+  hidden: true
+  config:
+    required: false
+  default: post
