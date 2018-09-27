@@ -7,13 +7,13 @@
     {% else %}
     <div class="toc">
     {% endif %}
-        <input type='checkbox' id=toggle />
-        <label class="toc-header " for=toggle>
+        <label class="toc-header">
             Table of Contents
-            <span class="octicon octicon-chevron-down"></span>
-            <span class="octicon octicon-chevron-up"></span>
         </label>
         {{content | toc_only}}
     </div>
 
 {% endif %}
+<script>
+  var sticky = new Sticky('.toc');
+</script>

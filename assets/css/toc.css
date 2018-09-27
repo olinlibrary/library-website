@@ -1,0 +1,28 @@
+.toc {
+  /* position: -webkit-sticky;
+  position: sticky;
+  align-self: flex-start; */
+}
+.toc-header{
+
+  font-size:1.5rem;
+}
+.toc ul {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.toc li {
+  padding-left: 1em;
+  text-indent: -1em;
+}
+.toc a {
+  border-bottom: none;
+  color:#ED037C;
+}
+
+.toc li:before {
+  content: "+";
+  padding-right: 5px;
+}
