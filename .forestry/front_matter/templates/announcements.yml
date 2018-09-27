@@ -13,3 +13,5 @@ fields:
   config:
     required: false
   default: post
+pages:
+- _posts/forestry.io-test.md
