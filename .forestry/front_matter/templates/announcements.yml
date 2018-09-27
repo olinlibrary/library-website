@@ -14,4 +14,4 @@ fields:
     required: false
   default: post
 pages:
-- _posts/forestry.io-test.md
+- _posts/2018-09-27-forestry.io-test.md
