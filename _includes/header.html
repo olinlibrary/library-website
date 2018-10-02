@@ -12,6 +12,30 @@
     <!-- Nav -->
       <nav id="nav">
         <ul>
+        {% for item in site.menus.header %}
+          {% if item.children %}
+          <li class="current">
+          {% else %}
+          <li>
+          {% endif %}
+            <a href="{{ item.url }}">{{ item.title }}
+            <i class="fa fa-angle-down"></i>
+            </a>
+            {% if item.children %}
+              <ul>
+              {% for item in item.children %}
+                <li>
+                  <a style="font-size:20px;" href="{{ item.url }}">
+                    {{ item.title }}
+                  </a>
+                </li>
+              {% endfor %}
+              </ul>
+            {% endif %}
+          </li>
+        {% endfor %}
+        </ul>
+        <!-- <ul>
           <li class="current"><a href="{{ "/" | prepend: site.baseurl }}">Home</a></li>
           <li>
             <a href="#">Access & Services <i class="fa fa-angle-down"></i></a>
@@ -47,7 +71,7 @@
               <li><a style="font-size:20px;" href="http://www.olin.edu/students/academic-calendar-deadlines-2018-19/">Academic Calendar</a></li>
             </ul>
           </li>
-        </ul>
+        </ul> -->
       </nav>
 
   </header>
