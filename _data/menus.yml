@@ -1,17 +1,23 @@
+---
 header:
-  - url: /
-    title: Home
-    identifier: home
-  - url: #
-    title: Access & Services
-    identifier: services
-    children:
-      - url: https://olin.libwizard.com/ill
-        title: Submit Interlibrary Loan Request
-        identifier: ill
-  - url: #
-    title: Collections
-    identifier: collections
-  - url: #
-    title: News & Events
-    identifier: news
+- url: https://olin.libwizard.com/ill
+  weight: 1
+  parent: collections
+  title: Submit Interlibrary Loan Request
+- title: News & Events
+  identifier: news
+  weight: 1
+- title: Collections
+  identifier: collections
+  weight: 2
+- title: Access & Services
+  identifier: services
+  children:
+  - url: https://olin.libwizard.com/ill
+    title: Submit Interlibrary Loan Request
+    identifier: ill
+  weight: 3
+- url: "/"
+  title: Home
+  identifier: home
+  weight: 4
