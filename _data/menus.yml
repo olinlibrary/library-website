@@ -12,10 +12,6 @@ header:
   weight: 2
 - title: Access & Services
   identifier: services
-  children:
-  - url: https://olin.libwizard.com/ill
-    title: Submit Interlibrary Loan Request
-    identifier: ill
   weight: 3
 - url: "/"
   title: Home
