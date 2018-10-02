@@ -21,13 +21,10 @@ gem "minima", "~> 2.0"
 group :jekyll_plugins do
   gem "jekyll-feed", "~> 0.6"
   gem 'jekyll-toc'
+  gem 'jekyll-menus'
+  gem "jekyll-paginate", "~> 1.1"
+  gem "jekyll-gist", "~> 1.5"
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
-
-# Added at 2018-09-20 15:04:26 -0400 by slyu:
-gem "jekyll-paginate", "~> 1.1"
-
-# Added at 2018-09-20 15:04:38 -0400 by slyu:
-gem "jekyll-gist", "~> 1.5"
