@@ -33,9 +33,11 @@ plugins:
   - jekyll-toc
   - jekyll-paginate
   - jekyll-gist
+  - jekyll-menus
 toc:
   min_level: 2 # default: 1
   max_level: 5 # default: 6
+
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.
