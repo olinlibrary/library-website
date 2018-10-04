@@ -14,11 +14,11 @@
         <ul>
         {% for item in site.menus.header %}
           {% if item.children %}
-          <li class="current">
-          {% else %}
           <li>
+          {% else %}
+          <li class="current">
           {% endif %}
-            <a href="{{ item.url }}">{{ item.title }}
+            <a href="{{ item.url | prepend: site.baseurl }}">{{ item.title }}
             <i class="fa fa-angle-down"></i>
             </a>
             {% if item.children %}
