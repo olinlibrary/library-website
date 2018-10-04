@@ -1,23 +1,112 @@
----
 header:
-- url: https://olin.libwizard.com/ill
-  weight: 1
-  parent: collections
-  title: Submit Interlibrary Loan Request
-- title: News & Events
-  identifier: news
-  weight: 1
-- title: Collections
-  identifier: collections
-  weight: 2
-- title: Access & Services
-  identifier: services
-  children:
-  - url: https://olin.libwizard.com/ill
-    title: Submit Interlibrary Loan Request
-    identifier: ill
-  weight: 3
 - url: "/"
   title: Home
   identifier: home
+  weight: 1
+- title: Access & Services
+  identifier: services
+  weight: 2
+- title: Collections
+  identifier: collections
+  weight: 3
+- title: News & Events
+  identifier: news
   weight: 4
+
+services:
+- url: https://olin.libwizard.com/ill
+  weight: 1
+  parent: services
+  title: Submit Interlibrary Loan Request
+
+- url: https://libguides.olin.edu/policies/circulation
+  weight: 1
+  parent: services
+  title: Check Out Policies
+
+- url: https://libguides.olin.edu/collection-accounts/off-campus
+  weight: 1
+  parent: services
+  title: Off Campus Access
+
+- url: https://libguides.olin.edu/training
+  weight: 1
+  parent: services
+  title: Training for Tools & Equipment
+
+- url: https://libguides.olin.edu/collection-accounts/accounts
+  weight: 1
+  parent: services
+  title: Library Accounts
+
+- url: https://libguides.olin.edu/programs-services
+  weight: 1
+  parent: services
+  title: Programs & Services
+
+- url: https://library.olin.edu/about.html
+  weight: 1
+  parent: services
+  title: Submit Interlibrary Loan Request
+
+collections:
+- url: https://libguides.olin.edu/collection-accounts
+  weight: 1
+  parent: services
+  title: The Local Collection
+
+- url: https://olin.tind.io/collection/Tools%20%26%20Equipment?ln=en
+  weight: 1
+  parent: services
+  title: Tools & Equipment
+
+- url: https://libguides.olin.edu/policies/collection
+  weight: 1
+  parent: services
+  title: Request a Purchase
+
+- url: https://libguides.olin.edu/collection-accounts/repository
+  weight: 1
+  parent: services
+  title: Institutional Repository
+
+- url: https://libguides.olin.edu/az.php
+  weight: 1
+  parent: services
+  title: A to Z Database List
+
+- url: https://search.ebscohost.com/login.aspx?authtype=ip,guest&custid=s6621808&groupid=main&profile=eds
+  weight: 1
+  parent: services
+  title: Cross-Platform Search
+
+- url: https://search.ebscohost.com/login.aspx?authtype=ip,guest&custid=s6621808&profile=eds&defaultdb=edspub&plp=1&direct=true&groupid=main
+  weight: 1
+  parent: services
+  title: Journal Search
+
+news:
+- url: /blog
+  weight: 1
+  parent: news
+  title: Announcements
+
+- url: https://libguides.olin.edu/policies/events-space
+  weight: 1
+  parent: news
+  title: Schedule an Event
+
+- url: https://events.olin.build/calendar
+  weight: 1
+  parent: news
+  title: olin.build Community Calendar
+
+- url: https://www.olin.edu/events/event-calendar/
+  weight: 1
+  parent: news
+  title: Official Event Calendar
+
+- url: https://www.olin.edu/students/academic-calendar-deadlines-2018-19/
+  weight: 1
+  parent: news
+  title: Academic Calendar
