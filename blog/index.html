@@ -5,15 +5,31 @@ title: Blog
 <section class="g-container">
   {% for post in paginator.posts %}
     <a href="{{post.url | prepend: site.baseurl}}">
-      <h1>{{ post.title }}</h1>
+      <h3>{{ post.title }}</h3>
     </a>
     <p class="author">
       <span class="date">{{ post.date | date: '%B %d, %Y' }}</span>
     </p>
     <div class="content">
+      <!-- fetch the first image -->
+      {% assign foundImage = 0 %}
+      {% assign images = post.content | split:"<img " %}
+      {% for image in images %}
+        {% if image contains 'src' %}
+            {% if foundImage == 0 %}
+                {% assign html = image | split:"/>" | first %}
+                <img class="preview" {{ html }} />
+                {% assign foundImage = 1 %}
+            {% endif %}
+        {% endif %}
+      {% endfor %}
+      <br>
+      <!-- first 75 words -->
       {{ post.content | strip_html | truncatewords:75}} <br><br>
+      <!-- read more -->
       <a href="{{ post.url }}">Read more...</a><br><br>
     </div>
+    <hr>
   {% endfor %}
 
   <!-- Pagination links -->
