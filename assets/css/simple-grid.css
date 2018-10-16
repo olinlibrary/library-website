@@ -19,6 +19,15 @@
   margin-right: auto;
 }
 
+tbody tr td{
+  text-align: center;
+  background-color: #FFFFFF
+}
+
+tbody tr td img{
+  max-width: 170px !important;
+  max-height: 170px !important;
+}
 .g-justify {
   text-align: justify;
 }

@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+      <nav id="nav">
+        <ul>
+        {% for item in site.menus.services %}
+          <li class="current">
+            <a href="{{ item.url | prepend: site.baseurl }}">{{ item.title }}</a>
+          </li>
+        {% endfor %}
+        </ul>
+      </nav>
+</html>
