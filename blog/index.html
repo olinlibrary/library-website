@@ -3,51 +3,73 @@ layout: default
 title: Blog
 ---
 <section style="margin-top:5em" class="g-container">
-  {% for post in paginator.posts %}
-    <a href="{{post.url | prepend: site.baseurl}}">
-      <h3 style="font-size:2rem; color:deeppink">{{ post.title }}</h3>
-    </a>
-    <p class="author">
-      <span class="date">{{ post.date | date: '%B %d, %Y' }}</span>
-    </p>
-    <div class="content">
-      <!-- fetch the first image -->
-      {% assign foundImage = 0 %}
-      {% assign images = post.content | split:"<img " %}
-      {% for image in images %}
-        {% if image contains 'src' %}
-            {% if foundImage == 0 %}
-                {% assign html = image | split:"/>" | first %}
-                <img class="preview" {{ html }} />
-                {% assign foundImage = 1 %}
-            {% endif %}
-        {% endif %}
-      {% endfor %}
-      <br>
-      <!-- first 75 words -->
-      {{ post.content | strip_html | truncatewords:75}} <br><br>
-      <!-- read more -->
-      <a href="{{ post.url }}">Read more...</a><br><br>
+  <div class="g-row" data-sticky-container>
+    <div class="g-col-4-sm">
+      <div class="recent">
+        <h2> What's New? </h2>
+        <ul>
+        {% for post in paginator.posts %}
+        <a href="{{post.url | prepend: site.baseurl}}">
+          <li style="color:deeppink">
+          {{ post.title }}
+          </li>
+        </a>
+        {% endfor %}
+        </ul>
+      </div>
     </div>
-    <hr>
-  {% endfor %}
+    <div class="g-col-8-sm">
+      {% for post in paginator.posts %}
+        <a href="{{post.url | prepend: site.baseurl}}">
+          <h3 style="font-size:2rem; color:#009BDF">{{ post.title }}</h3>
+        </a>
+        <p class="author">
+          <span class="date">{{ post.date | date: '%B %d, %Y' }}</span>
+        </p>
+        <div class="content">
+          <!-- fetch the first image -->
+          {% assign foundImage = 0 %}
+          {% assign images = post.content | split:"<img " %}
+          {% for image in images %}
+            {% if image contains 'src' %}
+                {% if foundImage == 0 %}
+                    {% assign html = image | split:"/>" | first %}
+                    <img class="preview" {{ html }} />
+                    {% assign foundImage = 1 %}
+                {% endif %}
+            {% endif %}
+          {% endfor %}
+          <br>
+          <!-- first 75 words -->
+          {{ post.content | strip_html | truncatewords:75}} <br><br>
+          <!-- read more -->
+          <a href="{{ post.url }}">Read more...</a><br><br>
+        </div>
+        <hr>
+      {% endfor %}
 
-  <!-- Pagination links -->
-  <div class="g-center">
-    {% if paginator.previous_page %}
-      <a href="{{ paginator.previous_page_path }}" class="previous">
-        <i class="fa fa-arrow-left"></i>
-      </a>
-    {% endif %}
-    {% if paginator.page%}
-    <span class="page_number ">
-      Page: {{ paginator.page }}
-    </span>
-    {% endif %}
-    {% if paginator.next_page %}
-      <a href="{{ paginator.next_page_path }}" class="next">
-        <i class="fa fa-arrow-right"></i>
-      </a>
-    {% endif %}
+      <!-- Pagination links -->
+      <div class="g-center">
+        {% if paginator.previous_page %}
+          <a href="{{ paginator.previous_page_path }}" class="previous">
+            <i class="fa fa-arrow-left"></i>
+          </a>
+        {% endif %}
+        {% if paginator.page%}
+        <span class="page_number ">
+          Page: {{ paginator.page }}
+        </span>
+        {% endif %}
+        {% if paginator.next_page %}
+          <a href="{{ paginator.next_page_path }}" class="next">
+            <i class="fa fa-arrow-right"></i>
+          </a>
+        {% endif %}
+      </div>
+    <div>
   </div>
+
 </section>
+<script>
+  var sticky = new Sticky('.recent');
+</script>
