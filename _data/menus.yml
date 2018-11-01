@@ -19,7 +19,7 @@ services:
   parent: services
   title: Submit Interlibrary Loan Request
 
-- url: https://libguides.olin.edu/policies/circulation
+- url: /libguides/policies
   weight: 1
   parent: services
   title: Check Out Policies
