@@ -2,10 +2,10 @@
 layout: default
 title: Blog
 ---
-<section class="g-container">
+<section style="margin-top:5em" class="g-container">
   {% for post in paginator.posts %}
     <a href="{{post.url | prepend: site.baseurl}}">
-      <h3>{{ post.title }}</h3>
+      <h3 style="font-size:2rem; color:deeppink">{{ post.title }}</h3>
     </a>
     <p class="author">
       <span class="date">{{ post.date | date: '%B %d, %Y' }}</span>
